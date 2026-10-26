@@ -24,7 +24,7 @@ jobs:
         uses: actions/checkout@v7
       - name: Определить адрес GitHub Pages
         id: pages
-        uses: actions/configure-pages@v5
+        uses: actions/configure-pages@v6
       - name: Проверить, собрать и загрузить артефакт
         uses: withastro/action@v6
         with:
