@@ -1,0 +1,4679 @@
+[
+  {
+    "id": "hair",
+    "title": "Парикмахерские услуги",
+    "status": "source",
+    "groups": [
+      {
+        "id": "women",
+        "title": "Женские стрижки",
+        "services": [
+          {
+            "id": "women-cut",
+            "title": "Женская стрижка",
+            "status": "source",
+            "variants": [
+              {
+                "id": "length-1",
+                "label": "до 15 см",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 1500
+                },
+                "source": "zhenskiy-zal"
+              },
+              {
+                "id": "length-2",
+                "label": "до 20 см",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 2000
+                },
+                "source": "zhenskiy-zal"
+              },
+              {
+                "id": "length-3",
+                "label": "до 40 см",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 2500
+                },
+                "source": "zhenskiy-zal"
+              }
+            ]
+          },
+          {
+            "id": "women-cut-set",
+            "title": "Стрижка, мытьё и укладка",
+            "status": "source",
+            "variants": [
+              {
+                "id": "length-1",
+                "label": "до 15 см",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 2500
+                },
+                "source": "zhenskiy-zal"
+              },
+              {
+                "id": "length-2",
+                "label": "до 20 см",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 3000
+                },
+                "source": "zhenskiy-zal"
+              },
+              {
+                "id": "length-3",
+                "label": "до 40 см",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 3500
+                },
+                "source": "zhenskiy-zal"
+              }
+            ]
+          },
+          {
+            "id": "bangs",
+            "title": "Стрижка чёлки",
+            "status": "source",
+            "variants": [
+              {
+                "id": "standard",
+                "label": "",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 800
+                },
+                "source": "zhenskiy-zal"
+              }
+            ]
+          },
+          {
+            "id": "thick-bangs",
+            "title": "Чёлка густая или от макушки",
+            "status": "source",
+            "variants": [
+              {
+                "id": "standard",
+                "label": "",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 1000
+                },
+                "source": "zhenskiy-zal"
+              }
+            ]
+          },
+          {
+            "id": "trim",
+            "title": "Подравнять волосы одним срезом",
+            "status": "source",
+            "variants": [
+              {
+                "id": "standard",
+                "label": "",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 800
+                },
+                "source": "zhenskiy-zal"
+              }
+            ]
+          },
+          {
+            "id": "women-edging",
+            "title": "Окантовка",
+            "status": "source",
+            "variants": [
+              {
+                "id": "standard",
+                "label": "",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 300
+                },
+                "source": "zhenskiy-zal"
+              }
+            ]
+          }
+        ],
+        "description": "Стрижка отдельно или с мытьём и укладкой; варианты стоимости зависят от длины волос."
+      },
+      {
+        "id": "men",
+        "title": "Мужские стрижки",
+        "services": [
+          {
+            "id": "shaved",
+            "title": "Стрижка наголо",
+            "status": "source",
+            "variants": [
+              {
+                "id": "without-wash",
+                "label": "Без мытья",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 600
+                },
+                "source": "muzhskoy-zal"
+              },
+              {
+                "id": "with-wash",
+                "label": "С мытьём",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 800
+                },
+                "source": "muzhskoy-zal"
+              }
+            ],
+            "note": "Волосы длиной от 10 см рассчитываются по женскому прайсу."
+          },
+          {
+            "id": "sport",
+            "title": "Спортивная стрижка, 2 насадки",
+            "status": "source",
+            "variants": [
+              {
+                "id": "without-wash",
+                "label": "Без мытья",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 800
+                },
+                "source": "muzhskoy-zal"
+              },
+              {
+                "id": "with-wash",
+                "label": "С мытьём",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 1000
+                },
+                "source": "muzhskoy-zal"
+              }
+            ],
+            "note": "Волосы длиной от 10 см рассчитываются по женскому прайсу."
+          },
+          {
+            "id": "classic",
+            "title": "Классическая мужская стрижка",
+            "status": "source",
+            "variants": [
+              {
+                "id": "without-wash",
+                "label": "Без мытья",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 1000
+                },
+                "source": "muzhskoy-zal"
+              },
+              {
+                "id": "with-wash",
+                "label": "С мытьём",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 1200
+                },
+                "source": "muzhskoy-zal"
+              }
+            ],
+            "note": "Волосы длиной от 10 см рассчитываются по женскому прайсу."
+          },
+          {
+            "id": "creative",
+            "title": "Удлинённая, креативная, шапочка",
+            "status": "source",
+            "variants": [
+              {
+                "id": "without-wash",
+                "label": "Без мытья",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 1200
+                },
+                "source": "muzhskoy-zal"
+              },
+              {
+                "id": "with-wash",
+                "label": "С мытьём",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 1400
+                },
+                "source": "muzhskoy-zal"
+              }
+            ],
+            "note": "Волосы длиной от 10 см рассчитываются по женскому прайсу."
+          },
+          {
+            "id": "flat",
+            "title": "Площадка, ёжик, бобрик",
+            "status": "source",
+            "variants": [
+              {
+                "id": "without-wash",
+                "label": "Без мытья",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 1300
+                },
+                "source": "muzhskoy-zal"
+              },
+              {
+                "id": "with-wash",
+                "label": "С мытьём",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 1500
+                },
+                "source": "muzhskoy-zal"
+              }
+            ],
+            "note": "Волосы длиной от 10 см рассчитываются по женскому прайсу."
+          },
+          {
+            "id": "men-edging",
+            "title": "Окантовка",
+            "status": "source",
+            "variants": [
+              {
+                "id": "standard",
+                "label": "",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 500
+                },
+                "source": "muzhskoy-zal"
+              }
+            ]
+          },
+          {
+            "id": "moustache",
+            "title": "Стрижка усов",
+            "status": "source",
+            "variants": [
+              {
+                "id": "standard",
+                "label": "",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 300
+                },
+                "source": "muzhskoy-zal"
+              }
+            ]
+          },
+          {
+            "id": "beard",
+            "title": "Стрижка бороды",
+            "status": "source",
+            "variants": [
+              {
+                "id": "standard",
+                "label": "",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 500
+                },
+                "source": "muzhskoy-zal"
+              }
+            ]
+          },
+          {
+            "id": "beard-shape",
+            "title": "Оформление бороды",
+            "status": "source",
+            "variants": [
+              {
+                "id": "standard",
+                "label": "",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 800
+                },
+                "source": "muzhskoy-zal"
+              }
+            ]
+          },
+          {
+            "id": "men-wash",
+            "title": "Мытьё головы",
+            "status": "source",
+            "variants": [
+              {
+                "id": "standard",
+                "label": "",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 200
+                },
+                "source": "muzhskoy-zal"
+              }
+            ]
+          },
+          {
+            "id": "men-dry",
+            "title": "Укладка феном",
+            "status": "source",
+            "variants": [
+              {
+                "id": "standard",
+                "label": "",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 400
+                },
+                "source": "muzhskoy-zal"
+              }
+            ]
+          },
+          {
+            "id": "patterns",
+            "title": "Рисунки и узоры машинкой",
+            "status": "conflict",
+            "variants": [
+              {
+                "id": "men",
+                "label": "Мужской прайс",
+                "price": {
+                  "kind": "from",
+                  "amount": 300
+                },
+                "source": "muzhskoy-zal"
+              },
+              {
+                "id": "detail",
+                "label": "Отдельная страница",
+                "price": {
+                  "kind": "range",
+                  "min": 300,
+                  "max": 2500
+                },
+                "source": "risunki-i-uzory"
+              }
+            ],
+            "note": "Нижняя граница совпадает; верхняя указана только на отдельной странице."
+          }
+        ],
+        "description": "Стрижки с мытьём и без него, оформление бороды и дополнительные услуги.",
+        "publicNote": "Волосы длиной от 10 см рассчитываются по женскому прайсу."
+      },
+      {
+        "id": "social",
+        "title": "Льготные стрижки",
+        "services": [
+          {
+            "id": "social-cut",
+            "title": "Простая стрижка пенсионерам от 65 лет",
+            "status": "source",
+            "variants": [
+              {
+                "id": "men",
+                "label": "Мужчины",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 500
+                },
+                "source": "strizhki"
+              },
+              {
+                "id": "women",
+                "label": "Женщины",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 500
+                },
+                "source": "strizhki"
+              }
+            ],
+            "note": "Льготные услуги до 12:00. Другие ограничения на странице не указаны."
+          }
+        ],
+        "description": "Простая стрижка для пенсионеров от 65 лет.",
+        "publicNote": "Льготные услуги оказываются до 12:00."
+      },
+      {
+        "id": "styling",
+        "title": "Укладки и причёски",
+        "services": [
+          {
+            "id": "daily-style",
+            "title": "Повседневная укладка феном с мытьём",
+            "status": "conflict",
+            "variants": [
+              {
+                "id": "ukladki-0",
+                "label": "до 15 см",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 1300
+                },
+                "source": "ukladki"
+              },
+              {
+                "id": "ukladki-1",
+                "label": "до 20 см",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 1500
+                },
+                "source": "ukladki"
+              },
+              {
+                "id": "ukladki-2",
+                "label": "до 40 см",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 1800
+                },
+                "source": "ukladki"
+              },
+              {
+                "id": "zhenskiy-zal-0",
+                "label": "до 15 см",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 1800
+                },
+                "source": "zhenskiy-zal"
+              },
+              {
+                "id": "zhenskiy-zal-1",
+                "label": "до 20 см",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 2300
+                },
+                "source": "zhenskiy-zal"
+              },
+              {
+                "id": "zhenskiy-zal-2",
+                "label": "до 40 см",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 2500
+                },
+                "source": "zhenskiy-zal"
+              }
+            ]
+          },
+          {
+            "id": "event-style",
+            "title": "Вечерняя, свадебная причёска",
+            "status": "source",
+            "variants": [
+              {
+                "id": "length-1",
+                "label": "до 15 см",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 3000
+                },
+                "source": "pricheski"
+              },
+              {
+                "id": "length-2",
+                "label": "до 20 см",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 4000
+                },
+                "source": "pricheski"
+              },
+              {
+                "id": "length-3",
+                "label": "до 40 см",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 5000
+                },
+                "source": "pricheski"
+              }
+            ],
+            "note": "Те же цены на /zhenskiy-zal."
+          },
+          {
+            "id": "braids",
+            "title": "Плетение кос",
+            "status": "conflict",
+            "variants": [
+              {
+                "id": "general",
+                "label": "Женский прайс",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 1000
+                },
+                "source": "zhenskiy-zal"
+              },
+              {
+                "id": "detail",
+                "label": "Отдельная страница",
+                "price": {
+                  "kind": "range",
+                  "min": 500,
+                  "max": 2500
+                },
+                "source": "pleteniye-kos"
+              }
+            ],
+            "note": "На отдельной странице написано «от 500 - 2500»; формулировка границ требует подтверждения."
+          },
+          {
+            "id": "backcomb",
+            "title": "Начёс",
+            "status": "source",
+            "variants": [
+              {
+                "id": "standard",
+                "label": "",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 100
+                },
+                "source": "zhenskiy-zal"
+              }
+            ]
+          }
+        ],
+        "description": "Вечерние и свадебные причёски, начёс."
+      },
+      {
+        "id": "color",
+        "title": "Окрашивание",
+        "services": [
+          {
+            "id": "one-tone",
+            "title": "Окрашивание в один тон",
+            "status": "source",
+            "variants": [
+              {
+                "id": "length-1",
+                "label": "до 15 см",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 1500
+                },
+                "source": "okrashivaniye"
+              },
+              {
+                "id": "length-2",
+                "label": "до 20 см",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 1800
+                },
+                "source": "okrashivaniye"
+              },
+              {
+                "id": "length-3",
+                "label": "до 40 см",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 2000
+                },
+                "source": "okrashivaniye"
+              }
+            ],
+            "note": "Работа без стоимости материалов."
+          },
+          {
+            "id": "decolor",
+            "title": "Декапирование",
+            "status": "source",
+            "variants": [
+              {
+                "id": "length-1",
+                "label": "до 15 см",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 1500
+                },
+                "source": "okrashivaniye"
+              },
+              {
+                "id": "length-2",
+                "label": "до 20 см",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 1800
+                },
+                "source": "okrashivaniye"
+              },
+              {
+                "id": "length-3",
+                "label": "до 40 см",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 2000
+                },
+                "source": "okrashivaniye"
+              }
+            ],
+            "note": "Работа без стоимости материалов."
+          },
+          {
+            "id": "tone",
+            "title": "Тонирование",
+            "status": "source",
+            "variants": [
+              {
+                "id": "length-1",
+                "label": "до 15 см",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 2500
+                },
+                "source": "okrashivaniye"
+              },
+              {
+                "id": "length-2",
+                "label": "до 20 см",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 2700
+                },
+                "source": "okrashivaniye"
+              },
+              {
+                "id": "length-3",
+                "label": "до 40 см",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 3000
+                },
+                "source": "okrashivaniye"
+              }
+            ],
+            "note": "Работа без стоимости материалов."
+          },
+          {
+            "id": "color-one",
+            "title": "Колорирование в один цвет",
+            "status": "source",
+            "variants": [
+              {
+                "id": "length-1",
+                "label": "до 15 см",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 2500
+                },
+                "source": "okrashivaniye"
+              },
+              {
+                "id": "length-2",
+                "label": "до 20 см",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 3000
+                },
+                "source": "okrashivaniye"
+              },
+              {
+                "id": "length-3",
+                "label": "до 40 см",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 4000
+                },
+                "source": "okrashivaniye"
+              }
+            ],
+            "note": "Работа без стоимости материалов."
+          },
+          {
+            "id": "color-two",
+            "title": "Колорирование в два цвета",
+            "status": "source",
+            "variants": [
+              {
+                "id": "length-1",
+                "label": "до 15 см",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 3000
+                },
+                "source": "okrashivaniye"
+              },
+              {
+                "id": "length-2",
+                "label": "до 20 см",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 3500
+                },
+                "source": "okrashivaniye"
+              },
+              {
+                "id": "length-3",
+                "label": "до 40 см",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 4500
+                },
+                "source": "okrashivaniye"
+              }
+            ],
+            "note": "Работа без стоимости материалов."
+          },
+          {
+            "id": "dry-shape",
+            "title": "Сушка с приданием формы",
+            "status": "source",
+            "variants": [
+              {
+                "id": "length-1",
+                "label": "до 15 см",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 800
+                },
+                "source": "okrashivaniye"
+              },
+              {
+                "id": "length-2",
+                "label": "до 20 см",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 900
+                },
+                "source": "okrashivaniye"
+              },
+              {
+                "id": "length-3",
+                "label": "до 40 см",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 1000
+                },
+                "source": "okrashivaniye"
+              }
+            ],
+            "note": "Работа без стоимости материалов."
+          },
+          {
+            "id": "simple-dry",
+            "title": "Простая сушка",
+            "status": "source",
+            "variants": [
+              {
+                "id": "standard",
+                "label": "",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 500
+                },
+                "source": "okrashivaniye"
+              }
+            ],
+            "note": "Работа без стоимости материалов."
+          },
+          {
+            "id": "airtouch",
+            "title": "Airtouch",
+            "status": "needs-confirmation",
+            "variants": [
+              {
+                "id": "first",
+                "label": "Первая указанная цена",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 15000
+                },
+                "source": "okrashivaniye"
+              },
+              {
+                "id": "second",
+                "label": "Вторая указанная цена",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 20000
+                },
+                "source": "okrashivaniye"
+              }
+            ],
+            "note": "Привязка двух цен к трём колонкам длины неоднозначна. Без стоимости материалов."
+          },
+          {
+            "id": "foil",
+            "title": "Мелирование на фольгу",
+            "status": "conflict",
+            "variants": [
+              {
+                "id": "color-0",
+                "label": "до 15 см",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 2500
+                },
+                "source": "okrashivaniye"
+              },
+              {
+                "id": "color-1",
+                "label": "до 20 см",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 3000
+                },
+                "source": "okrashivaniye"
+              },
+              {
+                "id": "color-2",
+                "label": "до 40 см",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 4000
+                },
+                "source": "okrashivaniye"
+              },
+              {
+                "id": "detail-0",
+                "label": "до 10",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 1000
+                },
+                "source": "melirovaniye"
+              },
+              {
+                "id": "detail-1",
+                "label": "до 15",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 1200
+                },
+                "source": "melirovaniye"
+              },
+              {
+                "id": "detail-2",
+                "label": "до 20",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 1400
+                },
+                "source": "melirovaniye"
+              },
+              {
+                "id": "detail-3",
+                "label": "от 20",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 1800
+                },
+                "source": "melirovaniye"
+              }
+            ],
+            "note": "Работа без материалов; шкалы длины и цены на страницах различаются. Единица длины на /melirovaniye не подписана."
+          },
+          {
+            "id": "cap",
+            "title": "Мелирование на шапочку",
+            "status": "conflict",
+            "variants": [
+              {
+                "id": "color-0",
+                "label": "до 15 см",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 2000
+                },
+                "source": "okrashivaniye"
+              },
+              {
+                "id": "detail-0",
+                "label": "до 10",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 1100
+                },
+                "source": "melirovaniye"
+              }
+            ],
+            "note": "Работа без материалов; шкалы длины и цены на страницах различаются. Единица длины на /melirovaniye не подписана."
+          },
+          {
+            "id": "bronding",
+            "title": "Брондирование",
+            "status": "needs-confirmation",
+            "note": "Есть в общем описании; отдельного прайса и состава процедуры нет.",
+            "variants": [
+              {
+                "id": "standard",
+                "label": "",
+                "price": {
+                  "kind": "unspecified"
+                },
+                "source": "about"
+              }
+            ]
+          },
+          {
+            "id": "ombre",
+            "title": "Окрашивание Омбре",
+            "status": "needs-confirmation",
+            "note": "Есть в общем описании; отдельного прайса и состава процедуры нет.",
+            "variants": [
+              {
+                "id": "standard",
+                "label": "",
+                "price": {
+                  "kind": "unspecified"
+                },
+                "source": "about"
+              }
+            ]
+          },
+          {
+            "id": "three-d",
+            "title": "3D-окрашивание",
+            "status": "needs-confirmation",
+            "note": "Есть в общем описании; отдельного прайса и состава процедуры нет.",
+            "variants": [
+              {
+                "id": "standard",
+                "label": "",
+                "price": {
+                  "kind": "unspecified"
+                },
+                "source": "about"
+              }
+            ]
+          }
+        ],
+        "description": "Окрашивание в один тон, тонирование, колорирование и сушка.",
+        "publicNote": "Указана стоимость работы без материалов."
+      },
+      {
+        "id": "perm",
+        "title": "Долговременная укладка",
+        "services": [
+          {
+            "id": "chemical",
+            "title": "Химическая завивка",
+            "status": "conflict",
+            "variants": [
+              {
+                "id": "women-0",
+                "label": "до 15 см",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 3000
+                },
+                "source": "zhenskiy-zal"
+              },
+              {
+                "id": "women-1",
+                "label": "до 20 см",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 4000
+                },
+                "source": "zhenskiy-zal"
+              },
+              {
+                "id": "women-2",
+                "label": "до 40 см",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 5000
+                },
+                "source": "zhenskiy-zal"
+              },
+              {
+                "id": "detail-0",
+                "label": "до 10",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 1900
+                },
+                "source": "khimicheskaya-zavivka"
+              },
+              {
+                "id": "detail-1",
+                "label": "до 15",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 2150
+                },
+                "source": "khimicheskaya-zavivka"
+              },
+              {
+                "id": "detail-2",
+                "label": "до 20",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 2350
+                },
+                "source": "khimicheskaya-zavivka"
+              },
+              {
+                "id": "detail-3",
+                "label": "от 20",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 2900
+                },
+                "source": "khimicheskaya-zavivka"
+              }
+            ],
+            "note": "Разные шкалы длины. Единица длины на отдельной странице не подписана."
+          },
+          {
+            "id": "long-style",
+            "title": "Долговременная укладка",
+            "status": "source",
+            "variants": [
+              {
+                "id": "length-1",
+                "label": "до 15 см",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 3300
+                },
+                "source": "zhenskiy-zal"
+              },
+              {
+                "id": "length-2",
+                "label": "до 20 см",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 4400
+                },
+                "source": "zhenskiy-zal"
+              },
+              {
+                "id": "length-3",
+                "label": "до 40 см",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 5500
+                },
+                "source": "zhenskiy-zal"
+              }
+            ]
+          }
+        ],
+        "description": "Долговременная укладка с вариантами по длине волос."
+      },
+      {
+        "id": "care",
+        "title": "Уход за волосами",
+        "services": [
+          {
+            "id": "wash",
+            "title": "Мытьё головы",
+            "status": "source",
+            "variants": [
+              {
+                "id": "length-1",
+                "label": "до 15 см",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 200
+                },
+                "source": "zhenskiy-zal"
+              },
+              {
+                "id": "length-2",
+                "label": "до 20 см",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 200
+                },
+                "source": "zhenskiy-zal"
+              },
+              {
+                "id": "length-3",
+                "label": "до 40 см",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 250
+                },
+                "source": "zhenskiy-zal"
+              }
+            ]
+          },
+          {
+            "id": "mask",
+            "title": "Лечебная маска",
+            "status": "source",
+            "variants": [
+              {
+                "id": "length-1",
+                "label": "до 15 см",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 450
+                },
+                "source": "zhenskiy-zal"
+              },
+              {
+                "id": "length-2",
+                "label": "до 20 см",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 500
+                },
+                "source": "zhenskiy-zal"
+              },
+              {
+                "id": "length-3",
+                "label": "до 40 см",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 550
+                },
+                "source": "zhenskiy-zal"
+              }
+            ]
+          },
+          {
+            "id": "lamination",
+            "title": "Ламинирование",
+            "status": "source",
+            "variants": [
+              {
+                "id": "short",
+                "label": "До 10 см, 1 пара ампул",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 3110
+                },
+                "source": "laminirovaniye"
+              },
+              {
+                "id": "medium",
+                "label": "10–15 см, обычные, 1 ампула",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 3430
+                },
+                "source": "laminirovaniye"
+              },
+              {
+                "id": "medium-thick",
+                "label": "10–15 см, густые, 1 ампула",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 3690
+                },
+                "source": "laminirovaniye"
+              },
+              {
+                "id": "long",
+                "label": "15–20 см, обычные, 1 ампула",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 3630
+                },
+                "source": "laminirovaniye"
+              },
+              {
+                "id": "long-thick",
+                "label": "15–20 см, густые, 2 ампулы",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 3890
+                },
+                "source": "laminirovaniye"
+              },
+              {
+                "id": "very-long",
+                "label": "20–25 см, обычные, 2 ампулы",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 4330
+                },
+                "source": "laminirovaniye"
+              },
+              {
+                "id": "very-long-thick",
+                "label": "20–25 см, густые, 3 ампулы",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 4590
+                },
+                "source": "laminirovaniye"
+              },
+              {
+                "id": "super",
+                "label": "25–35 см, обычные, 3 ампулы",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 5190
+                },
+                "source": "laminirovaniye"
+              },
+              {
+                "id": "super-thick",
+                "label": "25–35 см, густые, 4 ампулы",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 5490
+                },
+                "source": "laminirovaniye"
+              }
+            ],
+            "note": "Числа после типа волос — количество ампул из исходного прайса; для коротких написано «1 пара ампул». Мастер может увеличить количество по степени повреждения. Дополнительная ампула — 650 ₽.",
+            "publicNote": "Количество ампул зависит от степени повреждения волос и может быть увеличено мастером. Дополнительная ампула оплачивается отдельно; её цена указана ниже."
+          },
+          {
+            "id": "extra-ampoule",
+            "title": "Дополнительная ампула",
+            "status": "source",
+            "variants": [
+              {
+                "id": "standard",
+                "label": "",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 650
+                },
+                "source": "laminirovaniye"
+              }
+            ]
+          },
+          {
+            "id": "hair-botox",
+            "title": "Лечение, ботокс для волос",
+            "status": "needs-confirmation",
+            "variants": [
+              {
+                "id": "standard",
+                "label": "",
+                "price": {
+                  "kind": "unspecified"
+                },
+                "source": "uslugi-i-produkty"
+              }
+            ],
+            "note": "Упомянуто в общем перечне; описания и цены нет."
+          },
+          {
+            "id": "hair-extensions",
+            "title": "Наращивание волос",
+            "status": "needs-confirmation",
+            "variants": [
+              {
+                "id": "standard",
+                "label": "",
+                "price": {
+                  "kind": "unspecified"
+                },
+                "source": "uslugi-i-produkty"
+              }
+            ],
+            "note": "Упомянуто в общем перечне; описания и цены нет."
+          },
+          {
+            "id": "polishing",
+            "title": "Полировка волос",
+            "status": "needs-confirmation",
+            "variants": [
+              {
+                "id": "standard",
+                "label": "",
+                "price": {
+                  "kind": "from",
+                  "amount": 800
+                },
+                "source": "aktsii"
+              }
+            ],
+            "note": "Только в недатированных акциях; заявлено 30 минут, срок и актуальность не подтверждены."
+          }
+        ],
+        "description": "Мытьё, лечебная маска и ламинирование."
+      }
+    ],
+    "slug": "volosy",
+    "summary": "Женские и мужские стрижки, окрашивание и уход за волосами.",
+    "description": "Стрижки, окрашивание, причёски и уход за волосами. Для услуг с несколькими вариантами стоимость указана по длине волос или составу процедуры.",
+    "metaDescription": "Парикмахерские услуги в салоне «Юлия Дубицкая»: женские и мужские стрижки, окрашивание, причёски, уход за волосами. Цены и запись по телефону.",
+    "sources": [
+      "about",
+      "zhenskiy-zal",
+      "muzhskoy-zal"
+    ]
+  },
+  {
+    "id": "manicure",
+    "title": "Маникюр и наращивание ногтей",
+    "status": "source",
+    "groups": [
+      {
+        "id": "manicure",
+        "title": "Маникюр",
+        "services": [
+          {
+            "id": "classic",
+            "title": "Классический обрезной маникюр",
+            "status": "conflict",
+            "variants": [
+              {
+                "id": "main-bare",
+                "label": "Без покрытия",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 1300
+                },
+                "source": "manikyur"
+              },
+              {
+                "id": "main-polish",
+                "label": "С лаком",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 1600
+                },
+                "source": "manikyur"
+              },
+              {
+                "id": "main-gel",
+                "label": "С гель-лаком",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 2300
+                },
+                "source": "manikyur"
+              },
+              {
+                "id": "detail-bare",
+                "label": "Без лака",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 800
+                },
+                "source": "klassicheskiy-manikyur"
+              },
+              {
+                "id": "detail-polish",
+                "label": "С лаком",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 1100
+                },
+                "source": "klassicheskiy-manikyur"
+              }
+            ]
+          },
+          {
+            "id": "machine",
+            "title": "Аппаратный маникюр",
+            "status": "source",
+            "variants": [
+              {
+                "id": "length-1",
+                "label": "Без покрытия",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 1500
+                },
+                "source": "manikyur"
+              },
+              {
+                "id": "length-2",
+                "label": "С лаком",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 1900
+                },
+                "source": "manikyur"
+              },
+              {
+                "id": "length-3",
+                "label": "С гель-лаком",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 2400
+                },
+                "source": "manikyur"
+              }
+            ]
+          },
+          {
+            "id": "combined",
+            "title": "Комбинированный маникюр",
+            "status": "source",
+            "variants": [
+              {
+                "id": "length-1",
+                "label": "Без покрытия",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 1600
+                },
+                "source": "manikyur"
+              },
+              {
+                "id": "length-2",
+                "label": "С лаком",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 1900
+                },
+                "source": "manikyur"
+              },
+              {
+                "id": "length-3",
+                "label": "С гель-лаком",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 2800
+                },
+                "source": "manikyur"
+              }
+            ]
+          }
+        ],
+        "description": "Стоимость маникюра без покрытия, с лаком или с гель-лаком."
+      },
+      {
+        "id": "care",
+        "title": "Укрепление и уход",
+        "services": [
+          {
+            "id": "strength",
+            "title": "Укрепление ногтей гелем, акрилом",
+            "status": "source",
+            "variants": [
+              {
+                "id": "standard",
+                "label": "",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 400
+                },
+                "source": "manikyur"
+              }
+            ]
+          },
+          {
+            "id": "repair-with",
+            "title": "Ремонт ногтя при маникюре",
+            "status": "source",
+            "variants": [
+              {
+                "id": "standard",
+                "label": "",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 300
+                },
+                "source": "manikyur"
+              }
+            ]
+          },
+          {
+            "id": "repair-without",
+            "title": "Ремонт ногтя без маникюра",
+            "status": "source",
+            "variants": [
+              {
+                "id": "standard",
+                "label": "",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 500
+                },
+                "source": "manikyur"
+              }
+            ]
+          },
+          {
+            "id": "buff",
+            "title": "Шлифовка",
+            "status": "source",
+            "variants": [
+              {
+                "id": "standard",
+                "label": "",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 100
+                },
+                "source": "manikyur"
+              }
+            ]
+          },
+          {
+            "id": "acrylic-powder",
+            "title": "Укрепление акриловой пудрой",
+            "status": "source",
+            "variants": [
+              {
+                "id": "standard",
+                "label": "",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 400
+                },
+                "source": "klassicheskiy-manikyur"
+              }
+            ]
+          },
+          {
+            "id": "level",
+            "title": "Выравнивание гелем",
+            "status": "source",
+            "variants": [
+              {
+                "id": "standard",
+                "label": "",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 400
+                },
+                "source": "klassicheskiy-manikyur"
+              }
+            ]
+          },
+          {
+            "id": "paraffin",
+            "title": "Парафиновое обёртывание кистей",
+            "status": "source",
+            "variants": [
+              {
+                "id": "standard",
+                "label": "",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 600
+                },
+                "source": "parafinovoye-ukutyvaniye-kistey-ruk"
+              }
+            ]
+          },
+          {
+            "id": "ibx",
+            "title": "Укрепление IBX",
+            "status": "needs-confirmation",
+            "variants": [
+              {
+                "id": "standard",
+                "label": "",
+                "price": {
+                  "kind": "unspecified"
+                },
+                "source": "uslugi-i-produkty"
+              }
+            ]
+          },
+          {
+            "id": "spa",
+            "title": "СПА-уход",
+            "status": "needs-confirmation",
+            "note": "Есть в общем описании; отдельного прайса и состава процедуры нет.",
+            "variants": [
+              {
+                "id": "standard",
+                "label": "",
+                "price": {
+                  "kind": "unspecified"
+                },
+                "source": "uslugi-i-produkty"
+              }
+            ]
+          }
+        ],
+        "description": "Укрепление, выравнивание, ремонт ногтей и парафиновое обёртывание кистей."
+      },
+      {
+        "id": "coating",
+        "title": "Покрытия",
+        "services": [
+          {
+            "id": "base",
+            "title": "Лак-база",
+            "status": "source",
+            "variants": [
+              {
+                "id": "standard",
+                "label": "",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 100
+                },
+                "source": "manikyur"
+              }
+            ]
+          },
+          {
+            "id": "top",
+            "title": "Закрепляющее покрытие",
+            "status": "source",
+            "variants": [
+              {
+                "id": "standard",
+                "label": "",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 150
+                },
+                "source": "manikyur"
+              }
+            ]
+          },
+          {
+            "id": "medical",
+            "title": "Лечебный лак",
+            "status": "source",
+            "variants": [
+              {
+                "id": "standard",
+                "label": "",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 200
+                },
+                "source": "manikyur"
+              }
+            ]
+          },
+          {
+            "id": "polish",
+            "title": "Покрытие лаком",
+            "status": "conflict",
+            "variants": [
+              {
+                "id": "main",
+                "label": "В один тон",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 150
+                },
+                "source": "manikyur"
+              },
+              {
+                "id": "detail",
+                "label": "Покрытие лаком",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 350
+                },
+                "source": "pokrytiye-lakom"
+              }
+            ]
+          },
+          {
+            "id": "remove-polish",
+            "title": "Снятие лака",
+            "status": "conflict",
+            "variants": [
+              {
+                "id": "main",
+                "label": "Общий прайс",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 100
+                },
+                "source": "manikyur"
+              },
+              {
+                "id": "detail",
+                "label": "Отдельная страница",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 50
+                },
+                "source": "pokrytiye-lakom"
+              }
+            ]
+          },
+          {
+            "id": "french",
+            "title": "Френч покрытие",
+            "status": "conflict",
+            "variants": [
+              {
+                "id": "main",
+                "label": "Общий прайс",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 500
+                },
+                "source": "manikyur"
+              },
+              {
+                "id": "detail",
+                "label": "Дизайн",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 300
+                },
+                "source": "dizayn"
+              }
+            ]
+          },
+          {
+            "id": "gel",
+            "title": "Гель-лак в один тон",
+            "status": "conflict",
+            "variants": [
+              {
+                "id": "main",
+                "label": "Общий прайс",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 1000
+                },
+                "source": "manikyur"
+              },
+              {
+                "id": "detail",
+                "label": "Отдельная страница",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 900
+                },
+                "source": "dolgovremennoye-pokrytiye-tsvetnymi-gelyami-opi"
+              }
+            ]
+          },
+          {
+            "id": "gel-french",
+            "title": "Гель-лак френч",
+            "status": "conflict",
+            "variants": [
+              {
+                "id": "main",
+                "label": "Общий прайс",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 1500
+                },
+                "source": "manikyur"
+              },
+              {
+                "id": "detail",
+                "label": "Отдельная страница",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 1200
+                },
+                "source": "dolgovremennoye-pokrytiye-tsvetnymi-gelyami-opi"
+              }
+            ]
+          },
+          {
+            "id": "remove-gel",
+            "title": "Снятие гель-лака",
+            "status": "needs-confirmation",
+            "variants": [
+              {
+                "id": "with",
+                "label": "С последующим покрытием",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 400
+                },
+                "source": "manikyur"
+              },
+              {
+                "id": "without",
+                "label": "Без покрытия",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 600
+                },
+                "source": "manikyur"
+              },
+              {
+                "id": "detail",
+                "label": "Без уточнения",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 400
+                },
+                "source": "dolgovremennoye-pokrytiye-tsvetnymi-gelyami-opi"
+              }
+            ],
+            "note": "На детальной странице нет условия последующего покрытия."
+          }
+        ],
+        "description": "Лак-база, закрепляющее покрытие и лечебный лак."
+      },
+      {
+        "id": "extension",
+        "title": "Наращивание и дизайн",
+        "services": [
+          {
+            "id": "extension",
+            "title": "Гель, акрил, формы или типсы",
+            "status": "source",
+            "variants": [
+              {
+                "id": "standard",
+                "label": "",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 500
+                },
+                "source": "narashchivaniye-nogtey",
+                "unit": "1 ноготь"
+              }
+            ]
+          },
+          {
+            "id": "extension-french",
+            "title": "Гель, акрил: френч, мерцающий френч",
+            "status": "source",
+            "variants": [
+              {
+                "id": "standard",
+                "label": "",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 600
+                },
+                "source": "narashchivaniye-nogtey",
+                "unit": "1 ноготь"
+              }
+            ]
+          },
+          {
+            "id": "repair",
+            "title": "Ремонт акрилом, твёрдым гелем",
+            "status": "source",
+            "variants": [
+              {
+                "id": "standard",
+                "label": "",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 200
+                },
+                "source": "narashchivaniye-nogtey",
+                "unit": "1 ноготь"
+              }
+            ]
+          },
+          {
+            "id": "strength-unit",
+            "title": "Укрепление акрилом, твёрдым гелем",
+            "status": "source",
+            "variants": [
+              {
+                "id": "standard",
+                "label": "",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 100
+                },
+                "source": "narashchivaniye-nogtey",
+                "unit": "1 ноготь"
+              }
+            ]
+          },
+          {
+            "id": "remove",
+            "title": "Снятие, опил акрила или геля",
+            "status": "source",
+            "variants": [
+              {
+                "id": "standard",
+                "label": "",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 100
+                },
+                "source": "narashchivaniye-nogtey",
+                "unit": "1 ноготь"
+              }
+            ]
+          },
+          {
+            "id": "design",
+            "title": "Дизайн ногтя",
+            "status": "source",
+            "variants": [
+              {
+                "id": "standard",
+                "label": "",
+                "price": {
+                  "kind": "range",
+                  "min": 50,
+                  "max": 500
+                },
+                "source": "narashchivaniye-nogtey",
+                "unit": "1 ноготь"
+              }
+            ]
+          }
+        ],
+        "description": "Наращивание гелем или акрилом, снятие и дизайн.",
+        "publicNote": "Цены в этой группе указаны за один ноготь."
+      }
+    ],
+    "slug": "manikyur",
+    "summary": "Аппаратный и комбинированный маникюр, уход и наращивание ногтей.",
+    "description": "Аппаратный и комбинированный маникюр, укрепление, уход за руками и наращивание ногтей. Выберите вариант без покрытия, с лаком или с гель-лаком.",
+    "metaDescription": "Маникюр в салоне «Юлия Дубицкая» на Октябрьской, 35: аппаратный и комбинированный, укрепление, наращивание и дизайн ногтей. Прайс и телефон.",
+    "sources": [
+      "manikyur",
+      "narashchivaniye-nogtey"
+    ]
+  },
+  {
+    "id": "pedicure",
+    "title": "Педикюр и подология",
+    "status": "source",
+    "groups": [
+      {
+        "id": "aesthetic",
+        "title": "Педикюр",
+        "services": [
+          {
+            "id": "classic",
+            "title": "Классический педикюр",
+            "status": "source",
+            "variants": [
+              {
+                "id": "standard",
+                "label": "",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 2500
+                },
+                "source": "klassicheskiy"
+              }
+            ]
+          },
+          {
+            "id": "nails-only",
+            "title": "Обработка ногтевых пластин без стоп",
+            "status": "source",
+            "variants": [
+              {
+                "id": "standard",
+                "label": "",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 1800
+                },
+                "source": "klassicheskiy"
+              }
+            ]
+          },
+          {
+            "id": "trim",
+            "title": "Подрезание ногтей",
+            "status": "source",
+            "variants": [
+              {
+                "id": "standard",
+                "label": "",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 1500
+                },
+                "source": "klassicheskiy"
+              }
+            ]
+          },
+          {
+            "id": "finger-skin",
+            "title": "Снятие избыточного ороговения пальцев",
+            "status": "source",
+            "variants": [
+              {
+                "id": "standard",
+                "label": "",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 250
+                },
+                "source": "klassicheskiy"
+              }
+            ]
+          },
+          {
+            "id": "foot-skin",
+            "title": "Снятие избыточного ороговения стопы",
+            "status": "source",
+            "variants": [
+              {
+                "id": "standard",
+                "label": "",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 250
+                },
+                "source": "klassicheskiy"
+              }
+            ]
+          },
+          {
+            "id": "deformed-nail",
+            "title": "Обработка деформированного ногтя",
+            "status": "source",
+            "variants": [
+              {
+                "id": "standard",
+                "label": "",
+                "price": {
+                  "kind": "range",
+                  "min": 150,
+                  "max": 500
+                },
+                "source": "klassicheskiy"
+              }
+            ]
+          },
+          {
+            "id": "callus",
+            "title": "Обработка мозоля",
+            "status": "source",
+            "variants": [
+              {
+                "id": "standard",
+                "label": "",
+                "price": {
+                  "kind": "range",
+                  "min": 50,
+                  "max": 200
+                },
+                "source": "klassicheskiy"
+              }
+            ]
+          },
+          {
+            "id": "paraffin",
+            "title": "Парафиновое обёртывание ног",
+            "status": "source",
+            "variants": [
+              {
+                "id": "standard",
+                "label": "",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 700
+                },
+                "source": "klassicheskiy"
+              }
+            ]
+          },
+          {
+            "id": "antifungal",
+            "title": "Противогрибковый крем, капли",
+            "status": "source",
+            "variants": [
+              {
+                "id": "standard",
+                "label": "",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 100
+                },
+                "source": "klassicheskiy"
+              }
+            ]
+          },
+          {
+            "id": "cream",
+            "title": "Крем, лосьон для ног",
+            "status": "source",
+            "variants": [
+              {
+                "id": "standard",
+                "label": "",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 100
+                },
+                "source": "klassicheskiy"
+              }
+            ]
+          },
+          {
+            "id": "restore",
+            "title": "Восстановление ногтя гелем, акрилом",
+            "status": "needs-confirmation",
+            "variants": [
+              {
+                "id": "standard",
+                "label": "",
+                "price": {
+                  "kind": "unspecified"
+                },
+                "source": "klassicheskiy"
+              }
+            ]
+          },
+          {
+            "id": "peeling",
+            "title": "Пилинг",
+            "status": "source",
+            "variants": [
+              {
+                "id": "standard",
+                "label": "",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 300
+                },
+                "source": "klassicheskiy"
+              }
+            ]
+          },
+          {
+            "id": "buff",
+            "title": "Шлифовка ногтей",
+            "status": "source",
+            "variants": [
+              {
+                "id": "standard",
+                "label": "",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 100
+                },
+                "source": "klassicheskiy"
+              }
+            ]
+          },
+          {
+            "id": "gel",
+            "title": "Покрытие гель-лаком",
+            "status": "source",
+            "variants": [
+              {
+                "id": "standard",
+                "label": "",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 1000
+                },
+                "source": "klassicheskiy"
+              }
+            ]
+          },
+          {
+            "id": "remove-gel",
+            "title": "Снятие гель-лака",
+            "status": "source",
+            "variants": [
+              {
+                "id": "standard",
+                "label": "",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 400
+                },
+                "source": "klassicheskiy"
+              }
+            ]
+          },
+          {
+            "id": "machine",
+            "title": "Аппаратный педикюр",
+            "status": "source",
+            "variants": [
+              {
+                "id": "standard",
+                "label": "",
+                "price": {
+                  "kind": "range",
+                  "min": 2500,
+                  "max": 3000
+                },
+                "source": "apparatnyy"
+              }
+            ]
+          },
+          {
+            "id": "spa",
+            "title": "СПА-уход",
+            "status": "needs-confirmation",
+            "variants": [
+              {
+                "id": "standard",
+                "label": "",
+                "price": {
+                  "kind": "unspecified"
+                },
+                "source": "spa-ukhod-1"
+              }
+            ],
+            "note": "Страница пустая."
+          }
+        ],
+        "description": "Классический и аппаратный педикюр, уход за кожей стоп и ногтями."
+      },
+      {
+        "id": "podology",
+        "title": "Подология",
+        "services": [
+          {
+            "id": "consult",
+            "title": "Консультация, первичный приём",
+            "status": "source",
+            "variants": [
+              {
+                "id": "standard",
+                "label": "",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 500
+                },
+                "source": "korrektsiya-rosta-vrosshego-nogtya"
+              }
+            ]
+          },
+          {
+            "id": "hygiene",
+            "title": "Гигиеническая обработка стопы",
+            "status": "source",
+            "variants": [
+              {
+                "id": "standard",
+                "label": "",
+                "price": {
+                  "kind": "range",
+                  "min": 4000,
+                  "max": 9000
+                },
+                "source": "korrektsiya-rosta-vrosshego-nogtya"
+              }
+            ]
+          },
+          {
+            "id": "fungal",
+            "title": "Обработка стопы при лечении грибковой инфекции",
+            "status": "source",
+            "variants": [
+              {
+                "id": "standard",
+                "label": "",
+                "price": {
+                  "kind": "range",
+                  "min": 5700,
+                  "max": 9000
+                },
+                "source": "korrektsiya-rosta-vrosshego-nogtya"
+              }
+            ]
+          },
+          {
+            "id": "diabetic",
+            "title": "Обработка диабетической стопы",
+            "status": "source",
+            "variants": [
+              {
+                "id": "standard",
+                "label": "",
+                "price": {
+                  "kind": "range",
+                  "min": 4700,
+                  "max": 9000
+                },
+                "source": "korrektsiya-rosta-vrosshego-nogtya"
+              }
+            ]
+          },
+          {
+            "id": "nails",
+            "title": "Ногтевые пластины без стоп",
+            "status": "source",
+            "variants": [
+              {
+                "id": "standard",
+                "label": "",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 3200
+                },
+                "source": "korrektsiya-rosta-vrosshego-nogtya"
+              }
+            ]
+          },
+          {
+            "id": "feet",
+            "title": "Стопы без пальцев",
+            "status": "source",
+            "variants": [
+              {
+                "id": "standard",
+                "label": "",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 2800
+                },
+                "source": "korrektsiya-rosta-vrosshego-nogtya"
+              }
+            ]
+          },
+          {
+            "id": "ingrown",
+            "title": "Вросший ноготь, 1 ед.",
+            "status": "source",
+            "variants": [
+              {
+                "id": "standard",
+                "label": "",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 1000
+                },
+                "source": "korrektsiya-rosta-vrosshego-nogtya"
+              }
+            ]
+          },
+          {
+            "id": "ingrown-bandage",
+            "title": "Вросший ноготь с повязкой, 1 ед.",
+            "status": "source",
+            "variants": [
+              {
+                "id": "standard",
+                "label": "",
+                "price": {
+                  "kind": "range",
+                  "min": 1500,
+                  "max": 4500
+                },
+                "source": "korrektsiya-rosta-vrosshego-nogtya"
+              }
+            ]
+          },
+          {
+            "id": "callus",
+            "title": "Обработка, удаление мозолей",
+            "status": "source",
+            "variants": [
+              {
+                "id": "standard",
+                "label": "",
+                "price": {
+                  "kind": "range",
+                  "min": 500,
+                  "max": 1500
+                },
+                "source": "korrektsiya-rosta-vrosshego-nogtya"
+              }
+            ]
+          },
+          {
+            "id": "cracks",
+            "title": "Обработка трещин, натоптышей",
+            "status": "source",
+            "variants": [
+              {
+                "id": "standard",
+                "label": "",
+                "price": {
+                  "kind": "range",
+                  "min": 1000,
+                  "max": 2000
+                },
+                "source": "korrektsiya-rosta-vrosshego-nogtya"
+              }
+            ]
+          },
+          {
+            "id": "nail-clean",
+            "title": "Обработка, чистка ногтевой пластины, 1 ед.",
+            "status": "needs-confirmation",
+            "variants": [
+              {
+                "id": "standard",
+                "label": "",
+                "price": {
+                  "kind": "range",
+                  "min": 1000,
+                  "max": 4500
+                },
+                "source": "korrektsiya-rosta-vrosshego-nogtya"
+              }
+            ],
+            "note": "Для чистки ногтевой пластины указано «Онихомикоз, Онихогрифоз, Онихолизис, травма», «свыше 2х ногтей»; смысл ограничения требует подтверждения."
+          },
+          {
+            "id": "tampon",
+            "title": "Тампонирование, 1 ед.",
+            "status": "source",
+            "variants": [
+              {
+                "id": "standard",
+                "label": "",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 250
+                },
+                "source": "korrektsiya-rosta-vrosshego-nogtya"
+              }
+            ]
+          },
+          {
+            "id": "tampon-gehwol",
+            "title": "Тампонирование Nagelmasse Gehwol, 1 ед.",
+            "status": "source",
+            "variants": [
+              {
+                "id": "standard",
+                "label": "",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 500
+                },
+                "source": "korrektsiya-rosta-vrosshego-nogtya"
+              }
+            ]
+          },
+          {
+            "id": "bandage",
+            "title": "Повязка фиксирующая",
+            "status": "source",
+            "variants": [
+              {
+                "id": "standard",
+                "label": "",
+                "price": {
+                  "kind": "range",
+                  "min": 300,
+                  "max": 1200
+                },
+                "source": "korrektsiya-rosta-vrosshego-nogtya"
+              }
+            ]
+          }
+        ],
+        "description": "Обработка стоп и ногтей, вросшего ногтя, мозолей, трещин и натоптышей."
+      },
+      {
+        "id": "orthotics",
+        "title": "Корректирующие системы и ортезы",
+        "services": [
+          {
+            "id": "prosthetic",
+            "title": "Протезирование ногтевой пластины",
+            "status": "source",
+            "variants": [
+              {
+                "id": "standard",
+                "label": "",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 1000
+                },
+                "source": "korrektsiya-rosta-vrosshego-nogtya"
+              }
+            ]
+          },
+          {
+            "id": "titanium",
+            "title": "Установка / коррекция системы «Титановая нить»",
+            "status": "source",
+            "variants": [
+              {
+                "id": "standard",
+                "label": "",
+                "price": {
+                  "kind": "range",
+                  "min": 3000,
+                  "max": 5000
+                },
+                "source": "korrektsiya-rosta-vrosshego-nogtya"
+              }
+            ],
+            "note": "Также на /izgotovleniye-individualnykh-ortezov."
+          },
+          {
+            "id": "remove-system",
+            "title": "Снятие корректирующей системы",
+            "status": "source",
+            "variants": [
+              {
+                "id": "standard",
+                "label": "",
+                "price": {
+                  "kind": "range",
+                  "min": 500,
+                  "max": 1000
+                },
+                "source": "korrektsiya-rosta-vrosshego-nogtya"
+              }
+            ]
+          },
+          {
+            "id": "mold",
+            "title": "Слепок для скобы Фрезера",
+            "status": "source",
+            "variants": [
+              {
+                "id": "standard",
+                "label": "",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 500
+                },
+                "source": "korrektsiya-rosta-vrosshego-nogtya"
+              }
+            ]
+          },
+          {
+            "id": "fraser",
+            "title": "Изготовление и установка скобы Фрезера",
+            "status": "source",
+            "variants": [
+              {
+                "id": "standard",
+                "label": "",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 7000
+                },
+                "source": "korrektsiya-rosta-vrosshego-nogtya"
+              }
+            ],
+            "note": "Также на /izgotovleniye-individualnykh-ortezov."
+          },
+          {
+            "id": "fraser-correct",
+            "title": "Коррекция скобы Фрезера",
+            "status": "source",
+            "variants": [
+              {
+                "id": "standard",
+                "label": "",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 4000
+                },
+                "source": "korrektsiya-rosta-vrosshego-nogtya"
+              }
+            ]
+          },
+          {
+            "id": "orthosis",
+            "title": "Индивидуальный ортез",
+            "status": "source",
+            "variants": [
+              {
+                "id": "standard",
+                "label": "",
+                "price": {
+                  "kind": "range",
+                  "min": 2500,
+                  "max": 9000
+                },
+                "source": "korrektsiya-rosta-vrosshego-nogtya"
+              }
+            ],
+            "note": "Также на /izgotovleniye-individualnykh-ortezov."
+          },
+          {
+            "id": "insoles",
+            "title": "Анатомические стельки",
+            "status": "source",
+            "variants": [
+              {
+                "id": "standard",
+                "label": "",
+                "price": {
+                  "kind": "range",
+                  "min": 6000,
+                  "max": 8000
+                },
+                "source": "korrektsiya-rosta-vrosshego-nogtya"
+              }
+            ],
+            "note": "Также на /izgotovleniye-individualnykh-ortezov."
+          },
+          {
+            "id": "bs",
+            "title": "BS пластина",
+            "status": "source",
+            "variants": [
+              {
+                "id": "standard",
+                "label": "",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 3000
+                },
+                "source": "izgotovleniye-individualnykh-ortezov"
+              }
+            ]
+          }
+        ],
+        "description": "Корректирующие системы, протезирование ногтевой пластины, ортезы и стельки."
+      },
+      {
+        "id": "extra",
+        "title": "Дополнительные услуги",
+        "services": [
+          {
+            "id": "home-first",
+            "title": "Выезд на дом по Москве: первичный / 75+ /",
+            "status": "needs-confirmation",
+            "variants": [
+              {
+                "id": "standard",
+                "label": "",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 14000
+                },
+                "source": "korrektsiya-rosta-vrosshego-nogtya"
+              }
+            ],
+            "note": "Плюс стоимость процедуры. Значение «75+» не пояснено."
+          },
+          {
+            "id": "home-repeat",
+            "title": "Выезд на дом по Москве: повторный 1,5–2 мес. / 75+ /",
+            "status": "needs-confirmation",
+            "variants": [
+              {
+                "id": "standard",
+                "label": "",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 12500
+                },
+                "source": "korrektsiya-rosta-vrosshego-nogtya"
+              }
+            ],
+            "note": "Плюс стоимость процедуры. Значение «75+» не пояснено."
+          },
+          {
+            "id": "tools",
+            "title": "Обработка инструментов клиента до 3 ед.",
+            "status": "source",
+            "variants": [
+              {
+                "id": "standard",
+                "label": "",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 500
+                },
+                "source": "korrektsiya-rosta-vrosshego-nogtya"
+              }
+            ]
+          }
+        ],
+        "description": "Обработка инструментов клиента."
+      }
+    ],
+    "slug": "pedikyur",
+    "summary": "Эстетический педикюр, подология и корректирующие системы.",
+    "description": "Классический и аппаратный педикюр, обработка стоп и ногтей, подология. Корректирующие системы и индивидуальные ортезы выделены в отдельную группу прайса.",
+    "metaDescription": "Педикюр и подология в салоне «Юлия Дубицкая», Москва: уход за стопами и ногтями, корректирующие системы, ортезы. Услуги, цены и запись по телефону.",
+    "sources": [
+      "pedikyur",
+      "klassicheskiy",
+      "korrektsiya-rosta-vrosshego-nogtya"
+    ]
+  },
+  {
+    "id": "face",
+    "title": "Уход за лицом",
+    "status": "source",
+    "groups": [
+      {
+        "id": "cleansing",
+        "title": "Чистки и пилинг",
+        "services": [
+          {
+            "id": "manual",
+            "title": "Мануальная чистка Dermalogica",
+            "status": "source",
+            "variants": [
+              {
+                "id": "standard",
+                "label": "",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 4400
+                },
+                "source": "chistka-litsa"
+              }
+            ]
+          },
+          {
+            "id": "ultrasound",
+            "title": "Ультразвуковая чистка",
+            "status": "source",
+            "variants": [
+              {
+                "id": "standard",
+                "label": "",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 3500
+                },
+                "source": "chistka-litsa"
+              }
+            ]
+          },
+          {
+            "id": "exfoliation",
+            "title": "Эксфолиация, альтернатива пилингу",
+            "status": "source",
+            "variants": [
+              {
+                "id": "standard",
+                "label": "",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 2000
+                },
+                "source": "piling"
+              }
+            ]
+          }
+        ],
+        "description": "Мануальная и ультразвуковая чистка лица, эксфолиация."
+      },
+      {
+        "id": "care",
+        "title": "Уходовые процедуры",
+        "services": [
+          {
+            "id": "microzone",
+            "title": "MicroZone",
+            "status": "source",
+            "variants": [
+              {
+                "id": "short",
+                "label": "20 минут",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 1500
+                },
+                "source": "ukhod-po-litsu"
+              },
+              {
+                "id": "massage",
+                "label": "С массажем, 40 минут",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 2000
+                },
+                "source": "ukhod-po-litsu"
+              }
+            ],
+            "description": "Экспресс-уход Dermalogica. Есть вариант процедуры с массажем."
+          },
+          {
+            "id": "age-smart",
+            "title": "Age Smart",
+            "status": "source",
+            "variants": [
+              {
+                "id": "face",
+                "label": "Лицо, 60 минут",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 4400
+                },
+                "source": "ukhod-po-litsu"
+              },
+              {
+                "id": "neck",
+                "label": "Лицо и шея, 75 минут",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 5400
+                },
+                "source": "ukhod-po-litsu"
+              },
+              {
+                "id": "decollete",
+                "label": "Лицо, шея и декольте, 90 минут",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 6200
+                },
+                "source": "ukhod-po-litsu"
+              },
+              {
+                "id": "mask",
+                "label": "Лицо, шея, моделирующая маска, 110 минут",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 7200
+                },
+                "source": "ukhod-po-litsu"
+              },
+              {
+                "id": "full",
+                "label": "Лицо, шея, декольте, моделирующая маска, 130 минут",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 8400
+                },
+                "source": "ukhod-po-litsu"
+              }
+            ],
+            "description": "Антивозрастной уход. Варианты отличаются зоной ухода и наличием моделирующей маски."
+          },
+          {
+            "id": "hydro-plus",
+            "title": "Hydro Plus",
+            "status": "source",
+            "variants": [
+              {
+                "id": "face",
+                "label": "Лицо, 45 минут",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 3700
+                },
+                "source": "ukhod-po-litsu"
+              },
+              {
+                "id": "neck",
+                "label": "Лицо и шея, 60 минут",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 4200
+                },
+                "source": "ukhod-po-litsu"
+              },
+              {
+                "id": "decollete",
+                "label": "Лицо, шея и декольте, 75 минут",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 4700
+                },
+                "source": "ukhod-po-litsu"
+              }
+            ],
+            "description": "Интенсивная увлажняющая и успокаивающая процедура."
+          },
+          {
+            "id": "powerbright",
+            "title": "PowerBright TR",
+            "status": "source",
+            "variants": [
+              {
+                "id": "standard",
+                "label": "60 минут",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 4700
+                },
+                "source": "ukhod-po-litsu"
+              }
+            ],
+            "description": "Уход для выравнивания тона и текстуры кожи."
+          },
+          {
+            "id": "face-fit",
+            "title": "FACE FIT «Детокс для кожи»",
+            "status": "needs-confirmation",
+            "note": "Недатированное предложение из /aktsii. Доступность и условия не подтверждены.",
+            "variants": [
+              {
+                "id": "standard",
+                "label": "10 минут",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 750
+                },
+                "source": "aktsii"
+              }
+            ]
+          }
+        ],
+        "description": "Процедуры MicroZone, Age Smart, Hydro Plus и PowerBright TR."
+      },
+      {
+        "id": "massage",
+        "title": "Массаж лица и декольте",
+        "services": [
+          {
+            "id": "modeling",
+            "title": "Моделирующий массаж",
+            "status": "source",
+            "variants": [
+              {
+                "id": "face",
+                "label": "Лицо и декольте, 50 минут",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 2000
+                },
+                "source": "massazh-po-litsu-i-dekolte"
+              },
+              {
+                "id": "neck",
+                "label": "Лицо и шейно-воротниковая зона, 80 минут",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 2500
+                },
+                "source": "massazh-po-litsu-i-dekolte"
+              },
+              {
+                "id": "mask",
+                "label": "Лицо, 50 минут, и альгинатная маска",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 3200
+                },
+                "source": "massazh-po-litsu-i-dekolte"
+              }
+            ]
+          },
+          {
+            "id": "promo-rejuvenating",
+            "title": "Омолаживающий массаж лица",
+            "status": "needs-confirmation",
+            "note": "Недатированное предложение из /aktsii. Доступность и условия не подтверждены.",
+            "variants": [
+              {
+                "id": "standard",
+                "label": "20 минут",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 500
+                },
+                "source": "aktsii"
+              }
+            ]
+          },
+          {
+            "id": "promo-antistress",
+            "title": "Антистрессовый массаж лица",
+            "status": "needs-confirmation",
+            "note": "Недатированное предложение из /aktsii. Доступность и условия не подтверждены.",
+            "variants": [
+              {
+                "id": "standard",
+                "label": "20 минут",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 500
+                },
+                "source": "aktsii"
+              }
+            ]
+          }
+        ],
+        "description": "Моделирующий массаж лица, декольте и шейно-воротниковой зоны."
+      }
+    ],
+    "slug": "uhod-za-licom",
+    "summary": "Чистки, уходовые процедуры и массаж лица и декольте.",
+    "description": "Мануальная и ультразвуковая чистка, эксфолиация, уходовые процедуры Dermalogica и моделирующий массаж. Уходы различаются составом, зоной и продолжительностью.",
+    "metaDescription": "Уход за лицом в салоне «Юлия Дубицкая»: чистки, эксфолиация, процедуры Dermalogica, массаж лица и декольте. Прайс с длительностью и вариантами ухода.",
+    "sources": [
+      "chistka-litsa",
+      "piling",
+      "ukhod-po-litsu",
+      "massazh-po-litsu-i-dekolte"
+    ]
+  },
+  {
+    "id": "brows",
+    "title": "Брови и ресницы",
+    "status": "source",
+    "groups": [
+      {
+        "id": "brows",
+        "title": "Брови",
+        "services": [
+          {
+            "id": "architecture",
+            "title": "Архитектура бровей с окрашиванием",
+            "status": "source",
+            "variants": [
+              {
+                "id": "paint",
+                "label": "Краской",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 1500
+                },
+                "source": "brovi-i-resnitsy"
+              },
+              {
+                "id": "henna",
+                "label": "Хной",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 1800
+                },
+                "source": "brovi-i-resnitsy"
+              }
+            ]
+          },
+          {
+            "id": "tweezers",
+            "title": "Моделирование бровей пинцетом",
+            "status": "source",
+            "variants": [
+              {
+                "id": "standard",
+                "label": "",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 1000
+                },
+                "source": "brovi-i-resnitsy"
+              }
+            ]
+          },
+          {
+            "id": "wax",
+            "title": "Моделирование бровей воском",
+            "status": "source",
+            "variants": [
+              {
+                "id": "standard",
+                "label": "",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 1200
+                },
+                "source": "brovi-i-resnitsy"
+              }
+            ]
+          },
+          {
+            "id": "correction",
+            "title": "Коррекция бровей пинцетом",
+            "status": "source",
+            "variants": [
+              {
+                "id": "standard",
+                "label": "",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 700
+                },
+                "source": "brovi-i-resnitsy"
+              }
+            ]
+          },
+          {
+            "id": "coloring",
+            "title": "Колорирование бровей",
+            "status": "source",
+            "variants": [
+              {
+                "id": "standard",
+                "label": "",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 1600
+                },
+                "source": "brovi-i-resnitsy"
+              }
+            ]
+          },
+          {
+            "id": "lamination",
+            "title": "Ламинирование бровей",
+            "status": "source",
+            "variants": [
+              {
+                "id": "standard",
+                "label": "",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 3000
+                },
+                "source": "brovi-i-resnitsy"
+              }
+            ]
+          },
+          {
+            "id": "tint",
+            "title": "Окрашивание бровей",
+            "status": "source",
+            "variants": [
+              {
+                "id": "paint",
+                "label": "Краской",
+                "price": {
+                  "kind": "range",
+                  "min": 800,
+                  "max": 1000
+                },
+                "source": "brovi-i-resnitsy"
+              },
+              {
+                "id": "henna",
+                "label": "Хной",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 1000
+                },
+                "source": "brovi-i-resnitsy"
+              }
+            ]
+          },
+          {
+            "id": "men",
+            "title": "Оформление бровей для мужчин",
+            "status": "conflict",
+            "variants": [
+              {
+                "id": "parent",
+                "label": "На странице направления",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 1000
+                },
+                "source": "kosmetologiya"
+              },
+              {
+                "id": "detail",
+                "label": "В детальном прайсе",
+                "price": {
+                  "kind": "range",
+                  "min": 1000,
+                  "max": 2500
+                },
+                "source": "brovi-i-resnitsy"
+              }
+            ]
+          }
+        ],
+        "description": "Архитектура, моделирование, коррекция, окрашивание и ламинирование бровей."
+      },
+      {
+        "id": "extensions",
+        "title": "Наращивание ресниц",
+        "services": [
+          {
+            "id": "classic",
+            "title": "Классический объём",
+            "status": "source",
+            "variants": [
+              {
+                "id": "standard",
+                "label": "",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 2000
+                },
+                "source": "brovi-i-resnitsy"
+              }
+            ]
+          },
+          {
+            "id": "two-d",
+            "title": "2D",
+            "status": "source",
+            "variants": [
+              {
+                "id": "standard",
+                "label": "",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 2800
+                },
+                "source": "brovi-i-resnitsy"
+              }
+            ]
+          },
+          {
+            "id": "three-d",
+            "title": "3D",
+            "status": "source",
+            "variants": [
+              {
+                "id": "standard",
+                "label": "",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 3200
+                },
+                "source": "brovi-i-resnitsy"
+              }
+            ]
+          },
+          {
+            "id": "partial",
+            "title": "Неполный объём",
+            "status": "source",
+            "variants": [
+              {
+                "id": "standard",
+                "label": "",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 1800
+                },
+                "source": "brovi-i-resnitsy"
+              }
+            ]
+          },
+          {
+            "id": "corners",
+            "title": "Уголки",
+            "status": "source",
+            "variants": [
+              {
+                "id": "standard",
+                "label": "",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 1500
+                },
+                "source": "brovi-i-resnitsy"
+              }
+            ]
+          },
+          {
+            "id": "remove",
+            "title": "Снятие ресниц",
+            "status": "source",
+            "variants": [
+              {
+                "id": "standard",
+                "label": "",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 400
+                },
+                "source": "brovi-i-resnitsy"
+              }
+            ]
+          }
+        ],
+        "description": "От уголков и неполного объёма до классического, 2D и 3D."
+      },
+      {
+        "id": "lashes",
+        "title": "Уход за ресницами",
+        "services": [
+          {
+            "id": "tint",
+            "title": "Окрашивание ресниц",
+            "status": "source",
+            "variants": [
+              {
+                "id": "standard",
+                "label": "",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 700
+                },
+                "source": "brovi-i-resnitsy"
+              }
+            ]
+          },
+          {
+            "id": "lamination",
+            "title": "Ламинирование ресниц",
+            "status": "source",
+            "variants": [
+              {
+                "id": "standard",
+                "label": "",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 2700
+                },
+                "source": "brovi-i-resnitsy"
+              }
+            ]
+          },
+          {
+            "id": "botox",
+            "title": "Ботокс ресниц",
+            "status": "source",
+            "variants": [
+              {
+                "id": "standard",
+                "label": "",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 3200
+                },
+                "source": "brovi-i-resnitsy"
+              }
+            ]
+          },
+          {
+            "id": "curl",
+            "title": "Биозавивка ресниц",
+            "status": "source",
+            "variants": [
+              {
+                "id": "standard",
+                "label": "",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 2000
+                },
+                "source": "brovi-i-resnitsy"
+              }
+            ]
+          },
+          {
+            "id": "pigment",
+            "title": "Пигмент",
+            "status": "source",
+            "variants": [
+              {
+                "id": "standard",
+                "label": "",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 500
+                },
+                "source": "brovi-i-resnitsy"
+              }
+            ]
+          }
+        ],
+        "description": "Окрашивание, ламинирование, ботокс и биозавивка ресниц."
+      }
+    ],
+    "slug": "brovi-i-resnicy",
+    "summary": "Оформление бровей, окрашивание и уход за ресницами.",
+    "description": "Архитектура и коррекция бровей, окрашивание краской или хной. Для ресниц — наращивание, ламинирование, окрашивание и другие процедуры ухода.",
+    "metaDescription": "Брови и ресницы в салоне «Юлия Дубицкая»: архитектура, коррекция, окрашивание, наращивание и ламинирование. Цены и запись на Октябрьской, 35.",
+    "sources": [
+      "brovi-i-resnitsy"
+    ]
+  },
+  {
+    "id": "makeup",
+    "title": "Макияж",
+    "status": "source",
+    "groups": [
+      {
+        "id": "makeup",
+        "title": "Макияж",
+        "services": [
+          {
+            "id": "nude",
+            "title": "Nude",
+            "status": "source",
+            "variants": [
+              {
+                "id": "standard",
+                "label": "",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 3000
+                },
+                "source": "vizazh-litsa-make-up"
+              }
+            ]
+          },
+          {
+            "id": "day",
+            "title": "Дневной",
+            "status": "source",
+            "variants": [
+              {
+                "id": "standard",
+                "label": "",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 4000
+                },
+                "source": "vizazh-litsa-make-up"
+              }
+            ]
+          },
+          {
+            "id": "evening",
+            "title": "Вечерний с ресницами",
+            "status": "source",
+            "variants": [
+              {
+                "id": "standard",
+                "label": "",
+                "price": {
+                  "kind": "range",
+                  "min": 5000,
+                  "max": 6000
+                },
+                "source": "vizazh-litsa-make-up"
+              }
+            ]
+          },
+          {
+            "id": "wedding",
+            "title": "Свадебный с ресницами",
+            "status": "source",
+            "variants": [
+              {
+                "id": "standard",
+                "label": "",
+                "price": {
+                  "kind": "range",
+                  "min": 6000,
+                  "max": 7000
+                },
+                "source": "vizazh-litsa-make-up"
+              }
+            ]
+          }
+        ],
+        "description": "От Nude до вечернего и свадебного макияжа."
+      },
+      {
+        "id": "advice",
+        "title": "Консультация по косметике",
+        "services": [
+          {
+            "id": "cosmetics",
+            "title": "Разбор косметички и рекомендации по типу кожи",
+            "status": "source",
+            "variants": [
+              {
+                "id": "standard",
+                "label": "",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 1500
+                },
+                "source": "vizazh-litsa-make-up"
+              }
+            ]
+          },
+          {
+            "id": "body-art",
+            "title": "Свадебный боди-арт",
+            "status": "needs-confirmation",
+            "variants": [
+              {
+                "id": "standard",
+                "label": "",
+                "price": {
+                  "kind": "unspecified"
+                },
+                "source": "about"
+              }
+            ]
+          },
+          {
+            "id": "mehendi",
+            "title": "Мехенди",
+            "status": "needs-confirmation",
+            "variants": [
+              {
+                "id": "standard",
+                "label": "",
+                "price": {
+                  "kind": "unspecified"
+                },
+                "source": "about"
+              }
+            ]
+          },
+          {
+            "id": "glitter",
+            "title": "Глиттер тату",
+            "status": "needs-confirmation",
+            "variants": [
+              {
+                "id": "standard",
+                "label": "",
+                "price": {
+                  "kind": "unspecified"
+                },
+                "source": "about"
+              }
+            ]
+          }
+        ],
+        "description": "Разбор косметички и рекомендации продуктов по типу кожи."
+      }
+    ],
+    "slug": "makiyazh",
+    "summary": "Дневной, вечерний и свадебный макияж.",
+    "description": "Макияж Nude, дневной, вечерний и свадебный. Вечерний и свадебный варианты в прайсе указаны с ресницами. Также доступен разбор косметички с рекомендациями по типу кожи.",
+    "metaDescription": "Макияж в салоне «Юлия Дубицкая»: Nude, дневной, вечерний и свадебный. Разбор косметички и рекомендации. Цены и запись по телефону.",
+    "sources": [
+      "vizazh-litsa-make-up"
+    ]
+  },
+  {
+    "id": "depilation",
+    "title": "Депиляция",
+    "status": "source",
+    "groups": [
+      {
+        "id": "wax",
+        "title": "Депиляция воском WHITE LINE",
+        "services": [
+          {
+            "id": "lip",
+            "title": "Над губой, усики",
+            "status": "source",
+            "variants": [
+              {
+                "id": "standard",
+                "label": "",
+                "price": {
+                  "kind": "range",
+                  "min": 500,
+                  "max": 700
+                },
+                "source": "depilyatsiya-voskom"
+              }
+            ],
+            "note": "В исходнике доплата «За сложность в работе + 10» без единицы измерения; её размер не определён."
+          },
+          {
+            "id": "chin",
+            "title": "Подбородок",
+            "status": "source",
+            "variants": [
+              {
+                "id": "standard",
+                "label": "",
+                "price": {
+                  "kind": "range",
+                  "min": 800,
+                  "max": 1000
+                },
+                "source": "depilyatsiya-voskom"
+              }
+            ],
+            "note": "В исходнике доплата «За сложность в работе + 10» без единицы измерения; её размер не определён."
+          },
+          {
+            "id": "lower-legs",
+            "title": "Ноги до колена",
+            "status": "source",
+            "variants": [
+              {
+                "id": "standard",
+                "label": "",
+                "price": {
+                  "kind": "range",
+                  "min": 1000,
+                  "max": 1400
+                },
+                "source": "depilyatsiya-voskom"
+              }
+            ],
+            "note": "В исходнике доплата «За сложность в работе + 10» без единицы измерения; её размер не определён."
+          },
+          {
+            "id": "upper-legs",
+            "title": "Ноги выше колена",
+            "status": "source",
+            "variants": [
+              {
+                "id": "standard",
+                "label": "",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 1400
+                },
+                "source": "depilyatsiya-voskom"
+              }
+            ],
+            "note": "В исходнике доплата «За сложность в работе + 10» без единицы измерения; её размер не определён."
+          },
+          {
+            "id": "legs",
+            "title": "Ноги полностью",
+            "status": "source",
+            "variants": [
+              {
+                "id": "standard",
+                "label": "",
+                "price": {
+                  "kind": "range",
+                  "min": 2000,
+                  "max": 2500
+                },
+                "source": "depilyatsiya-voskom"
+              }
+            ],
+            "note": "В исходнике доплата «За сложность в работе + 10» без единицы измерения; её размер не определён."
+          },
+          {
+            "id": "bikini",
+            "title": "Бикини",
+            "status": "source",
+            "variants": [
+              {
+                "id": "standard",
+                "label": "",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 2000
+                },
+                "source": "depilyatsiya-voskom"
+              }
+            ],
+            "note": "В исходнике доплата «За сложность в работе + 10» без единицы измерения; её размер не определён."
+          },
+          {
+            "id": "deep-bikini",
+            "title": "Глубокое бикини",
+            "status": "source",
+            "variants": [
+              {
+                "id": "standard",
+                "label": "",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 3000
+                },
+                "source": "depilyatsiya-voskom"
+              }
+            ],
+            "note": "В исходнике доплата «За сложность в работе + 10» без единицы измерения; её размер не определён."
+          },
+          {
+            "id": "armpits",
+            "title": "Подмышки",
+            "status": "source",
+            "variants": [
+              {
+                "id": "standard",
+                "label": "",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 1000
+                },
+                "source": "depilyatsiya-voskom"
+              }
+            ],
+            "note": "В исходнике доплата «За сложность в работе + 10» без единицы измерения; её размер не определён."
+          },
+          {
+            "id": "buttocks",
+            "title": "Ягодицы",
+            "status": "source",
+            "variants": [
+              {
+                "id": "standard",
+                "label": "",
+                "price": {
+                  "kind": "range",
+                  "min": 1200,
+                  "max": 1500
+                },
+                "source": "depilyatsiya-voskom"
+              }
+            ],
+            "note": "В исходнике доплата «За сложность в работе + 10» без единицы измерения; её размер не определён."
+          },
+          {
+            "id": "abdomen",
+            "title": "Живот",
+            "status": "source",
+            "variants": [
+              {
+                "id": "standard",
+                "label": "",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 1000
+                },
+                "source": "depilyatsiya-voskom"
+              }
+            ],
+            "note": "В исходнике доплата «За сложность в работе + 10» без единицы измерения; её размер не определён."
+          },
+          {
+            "id": "chest",
+            "title": "Грудь",
+            "status": "source",
+            "variants": [
+              {
+                "id": "standard",
+                "label": "",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 1000
+                },
+                "source": "depilyatsiya-voskom"
+              }
+            ],
+            "note": "В исходнике доплата «За сложность в работе + 10» без единицы измерения; её размер не определён."
+          },
+          {
+            "id": "forearms",
+            "title": "Руки до локтя",
+            "status": "source",
+            "variants": [
+              {
+                "id": "standard",
+                "label": "",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 1000
+                },
+                "source": "depilyatsiya-voskom"
+              }
+            ],
+            "note": "В исходнике доплата «За сложность в работе + 10» без единицы измерения; её размер не определён."
+          },
+          {
+            "id": "arms",
+            "title": "Руки полностью",
+            "status": "source",
+            "variants": [
+              {
+                "id": "standard",
+                "label": "",
+                "price": {
+                  "kind": "range",
+                  "min": 1800,
+                  "max": 2000
+                },
+                "source": "depilyatsiya-voskom"
+              }
+            ],
+            "note": "В исходнике доплата «За сложность в работе + 10» без единицы измерения; её размер не определён."
+          },
+          {
+            "id": "waist",
+            "title": "Поясница",
+            "status": "source",
+            "variants": [
+              {
+                "id": "standard",
+                "label": "",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 1500
+                },
+                "source": "depilyatsiya-voskom"
+              }
+            ],
+            "note": "В исходнике доплата «За сложность в работе + 10» без единицы измерения; её размер не определён."
+          },
+          {
+            "id": "back",
+            "title": "Спина",
+            "status": "source",
+            "variants": [
+              {
+                "id": "standard",
+                "label": "",
+                "price": {
+                  "kind": "range",
+                  "min": 1800,
+                  "max": 2000
+                },
+                "source": "depilyatsiya-voskom"
+              }
+            ],
+            "note": "В исходнике доплата «За сложность в работе + 10» без единицы измерения; её размер не определён."
+          }
+        ],
+        "description": "Стоимость зависит от выбранной зоны.",
+        "publicNote": "При сложной работе предусмотрена доплата. Её размер уточняйте по телефону перед записью."
+      },
+      {
+        "id": "sugaring",
+        "title": "Шугаринг",
+        "services": [
+          {
+            "id": "sugaring",
+            "title": "Шугаринг",
+            "status": "paused",
+            "variants": [
+              {
+                "id": "standard",
+                "label": "",
+                "price": {
+                  "kind": "unspecified"
+                },
+                "source": "depilyatsiya-shugaring"
+              }
+            ],
+            "note": "Шугаринг временно не делаем."
+          }
+        ]
+      }
+    ],
+    "slug": "depilyaciya",
+    "summary": "Депиляция воском по зонам лица и тела.",
+    "description": "Депиляция природным воском WHITE LINE. Стоимость указана отдельно для каждой зоны лица и тела.",
+    "metaDescription": "Депиляция воском WHITE LINE в салоне «Юлия Дубицкая», Москва. Стоимость по зонам лица и тела, важные условия и телефон для записи.",
+    "sources": [
+      "depilyatsiya-voskom"
+    ]
+  },
+  {
+    "id": "permanent",
+    "title": "Перманентный макияж",
+    "status": "source",
+    "groups": [
+      {
+        "id": "permanent",
+        "title": "Татуаж",
+        "services": [
+          {
+            "id": "brows",
+            "title": "Брови",
+            "status": "source",
+            "variants": [
+              {
+                "id": "standard",
+                "label": "",
+                "price": {
+                  "kind": "range",
+                  "min": 8000,
+                  "max": 12000
+                },
+                "source": "tatuazh-permanentnyy-makiyazh"
+              }
+            ],
+            "note": "Процедура 1–2 часа. Коррекция не позднее 1,5 месяца после первичной процедуры; стоимость коррекции не указана."
+          },
+          {
+            "id": "lips-outline",
+            "title": "Контур губ",
+            "status": "source",
+            "variants": [
+              {
+                "id": "standard",
+                "label": "",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 5000
+                },
+                "source": "tatuazh-permanentnyy-makiyazh"
+              }
+            ],
+            "note": "Процедура 1–2 часа. Коррекция не позднее 1,5 месяца после первичной процедуры; стоимость коррекции не указана."
+          },
+          {
+            "id": "lips-shade",
+            "title": "Контур губ с растушёвкой",
+            "status": "source",
+            "variants": [
+              {
+                "id": "standard",
+                "label": "",
+                "price": {
+                  "kind": "range",
+                  "min": 8000,
+                  "max": 10000
+                },
+                "source": "tatuazh-permanentnyy-makiyazh"
+              }
+            ],
+            "note": "Процедура 1–2 часа. Коррекция не позднее 1,5 месяца после первичной процедуры; стоимость коррекции не указана."
+          },
+          {
+            "id": "eyes",
+            "title": "Глаза, межресничка",
+            "status": "source",
+            "variants": [
+              {
+                "id": "standard",
+                "label": "",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 8000
+                },
+                "source": "tatuazh-permanentnyy-makiyazh"
+              }
+            ],
+            "note": "Процедура 1–2 часа. Коррекция не позднее 1,5 месяца после первичной процедуры; стоимость коррекции не указана."
+          },
+          {
+            "id": "beauty-mark",
+            "title": "Мушка",
+            "status": "source",
+            "variants": [
+              {
+                "id": "standard",
+                "label": "",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 3000
+                },
+                "source": "tatuazh-permanentnyy-makiyazh"
+              }
+            ],
+            "note": "Процедура 1–2 часа. Коррекция не позднее 1,5 месяца после первичной процедуры; стоимость коррекции не указана."
+          }
+        ],
+        "description": "Варианты перманентного макияжа бровей, губ и глаз.",
+        "publicNote": "Коррекция проводится не позднее чем через 1,5 месяца после первичной процедуры. Стоимость коррекции уточните по телефону."
+      }
+    ],
+    "slug": "permanentnyy-makiyazh",
+    "summary": "Перманентный макияж бровей, губ и межресничной зоны.",
+    "description": "Татуаж бровей, контура губ, губ с растушёвкой и межресничной зоны. Продолжительность процедуры — 1–2 часа.",
+    "metaDescription": "Перманентный макияж в салоне «Юлия Дубицкая»: брови, губы и межресничная зона. Цены, длительность и условия коррекции. Запись по телефону.",
+    "sources": [
+      "tatuazh-permanentnyy-makiyazh"
+    ]
+  },
+  {
+    "id": "piercing",
+    "title": "Пирсинг",
+    "status": "source",
+    "groups": [
+      {
+        "id": "piercing",
+        "title": "Проколы",
+        "services": [
+          {
+            "id": "earlobe",
+            "title": "Мочки (двойные), 1 прокол",
+            "status": "needs-confirmation",
+            "variants": [
+              {
+                "id": "standard",
+                "label": "",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 1000
+                },
+                "source": "pirsing-mochki-ukha"
+              }
+            ],
+            "note": "Украшение не входит в цену прокола; исключение — явно указанная серёжка STUDEX. Формулировка «двойные, 1 прокол» сохранена, требует пояснения."
+          },
+          {
+            "id": "industrial",
+            "title": "Индастриал (двойные), 1 прокол",
+            "status": "needs-confirmation",
+            "variants": [
+              {
+                "id": "standard",
+                "label": "",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 1800
+                },
+                "source": "pirsing-mochki-ukha"
+              }
+            ],
+            "note": "Украшение не входит в цену прокола; исключение — явно указанная серёжка STUDEX. Формулировка «двойные, 1 прокол» сохранена, требует пояснения."
+          },
+          {
+            "id": "cartilage",
+            "title": "Хрящи ушей: хелекс, трагус, конч и др.",
+            "status": "source",
+            "variants": [
+              {
+                "id": "standard",
+                "label": "",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 2200
+                },
+                "source": "pirsing-mochki-ukha"
+              }
+            ],
+            "note": "Украшение не входит в цену прокола."
+          },
+          {
+            "id": "nose-lip-brow",
+            "title": "Крыло носа, губа, бровь",
+            "status": "source",
+            "variants": [
+              {
+                "id": "standard",
+                "label": "",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 2200
+                },
+                "source": "pirsing-mochki-ukha"
+              }
+            ],
+            "note": "Украшение не входит в цену прокола."
+          },
+          {
+            "id": "tongue-navel",
+            "title": "Язык, пупок, септум, смайл",
+            "status": "source",
+            "variants": [
+              {
+                "id": "standard",
+                "label": "",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 2400
+                },
+                "source": "pirsing-mochki-ukha"
+              }
+            ],
+            "note": "Украшение не входит в цену прокола."
+          },
+          {
+            "id": "nipples",
+            "title": "Соски (двойные), 1 прокол",
+            "status": "needs-confirmation",
+            "variants": [
+              {
+                "id": "standard",
+                "label": "",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 2200
+                },
+                "source": "pirsing-mochki-ukha"
+              }
+            ],
+            "note": "Украшение не входит в цену прокола; исключение — явно указанная серёжка STUDEX. Формулировка «двойные, 1 прокол» сохранена, требует пояснения."
+          },
+          {
+            "id": "studex",
+            "title": "Прокалывание мочки уха с серёжкой STUDEX",
+            "status": "source",
+            "variants": [
+              {
+                "id": "standard",
+                "label": "",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 2500
+                },
+                "source": "pirsing-mochki-ukha"
+              }
+            ]
+          }
+        ],
+        "description": "Проколы разных зон и прокалывание мочки уха системой STUDEX.",
+        "publicNote": "Украшение не входит в стоимость прокола, кроме услуги STUDEX, где серёжка включена. Если хотите установить своё украшение, проконсультируйтесь с мастером."
+      },
+      {
+        "id": "jewelry",
+        "title": "Украшения и микродермал",
+        "services": [
+          {
+            "id": "install",
+            "title": "Установка микродермала",
+            "status": "source",
+            "variants": [
+              {
+                "id": "standard",
+                "label": "",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 4000
+                },
+                "source": "pirsing-mochki-ukha"
+              }
+            ]
+          },
+          {
+            "id": "clean",
+            "title": "Чистка микродермала",
+            "status": "source",
+            "variants": [
+              {
+                "id": "standard",
+                "label": "",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 1000
+                },
+                "source": "pirsing-mochki-ukha"
+              }
+            ]
+          },
+          {
+            "id": "remove",
+            "title": "Удаление микродермала",
+            "status": "source",
+            "variants": [
+              {
+                "id": "standard",
+                "label": "",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 1000
+                },
+                "source": "pirsing-mochki-ukha"
+              }
+            ]
+          },
+          {
+            "id": "top",
+            "title": "Замена накрутки",
+            "status": "source",
+            "variants": [
+              {
+                "id": "standard",
+                "label": "",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 500
+                },
+                "source": "pirsing-mochki-ukha"
+              }
+            ]
+          },
+          {
+            "id": "jewelry",
+            "title": "Замена / установка украшений",
+            "status": "source",
+            "variants": [
+              {
+                "id": "standard",
+                "label": "",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 500
+                },
+                "source": "pirsing-mochki-ukha"
+              }
+            ]
+          },
+          {
+            "id": "anchor",
+            "title": "Якорь микродермала",
+            "status": "source",
+            "variants": [
+              {
+                "id": "standard",
+                "label": "",
+                "price": {
+                  "kind": "from",
+                  "amount": 900
+                },
+                "source": "pirsing-mochki-ukha"
+              }
+            ]
+          },
+          {
+            "id": "anchor-top",
+            "title": "Накрутка на якорь",
+            "status": "source",
+            "variants": [
+              {
+                "id": "standard",
+                "label": "",
+                "price": {
+                  "kind": "from",
+                  "amount": 500
+                },
+                "source": "pirsing-mochki-ukha"
+              }
+            ]
+          },
+          {
+            "id": "basic",
+            "title": "Базовые украшения",
+            "status": "source",
+            "variants": [
+              {
+                "id": "standard",
+                "label": "",
+                "price": {
+                  "kind": "range",
+                  "min": 500,
+                  "max": 1500
+                },
+                "source": "pirsing-mochki-ukha"
+              }
+            ]
+          }
+        ],
+        "description": "Микродермал, его обслуживание и замена украшений."
+      }
+    ],
+    "slug": "pirsing",
+    "summary": "Проколы, украшения и услуги с микродермалом.",
+    "description": "Пирсинг ушей и других зон, услуги с микродермалом, замена украшений. В прайсе отдельно указаны проколы и украшения.",
+    "metaDescription": "Пирсинг в салоне «Юлия Дубицкая» на Октябрьской: проколы, украшения, установка и обслуживание микродермала. Стоимость и условия записи.",
+    "sources": [
+      "pirsing-mochki-ukha"
+    ]
+  },
+  {
+    "id": "massage",
+    "title": "Массаж",
+    "status": "source",
+    "groups": [
+      {
+        "id": "zones",
+        "title": "Массаж по зонам",
+        "services": [
+          {
+            "id": "head",
+            "title": "Голова, 30 минут",
+            "status": "source",
+            "variants": [
+              {
+                "id": "standard",
+                "label": "",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 1000
+                },
+                "source": "massazh-po-zonam"
+              }
+            ]
+          },
+          {
+            "id": "neck",
+            "title": "Воротниковая зона, 30 минут",
+            "status": "source",
+            "variants": [
+              {
+                "id": "standard",
+                "label": "",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 1000
+                },
+                "source": "massazh-po-zonam"
+              }
+            ]
+          },
+          {
+            "id": "head-neck",
+            "title": "Голова и воротниковая зона, 50 минут",
+            "status": "source",
+            "variants": [
+              {
+                "id": "standard",
+                "label": "",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 2000
+                },
+                "source": "massazh-po-zonam"
+              }
+            ]
+          },
+          {
+            "id": "back",
+            "title": "Спина, 30 минут",
+            "status": "source",
+            "variants": [
+              {
+                "id": "standard",
+                "label": "",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 1000
+                },
+                "source": "massazh-po-zonam"
+              }
+            ]
+          },
+          {
+            "id": "promo-neck",
+            "title": "Массаж воротниковой зоны",
+            "status": "needs-confirmation",
+            "note": "Недатированное предложение. В обычном прайсе другая длительность — 30 минут.",
+            "variants": [
+              {
+                "id": "standard",
+                "label": "15 минут",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 350
+                },
+                "source": "aktsii"
+              }
+            ]
+          }
+        ],
+        "description": "Выберите зону и продолжительность сеанса."
+      },
+      {
+        "id": "anti-cellulite",
+        "title": "Антицеллюлитный массаж",
+        "services": [
+          {
+            "id": "general",
+            "title": "Общий, до 1 часа",
+            "status": "paused",
+            "variants": [
+              {
+                "id": "standard",
+                "label": "",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 2000
+                },
+                "source": "antitsellyulitnyy-massazh"
+              }
+            ],
+            "note": "На данный момент эту услугу не предоставляем."
+          },
+          {
+            "id": "abdomen",
+            "title": "Живот, до 20 минут",
+            "status": "paused",
+            "variants": [
+              {
+                "id": "standard",
+                "label": "",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 600
+                },
+                "source": "antitsellyulitnyy-massazh"
+              }
+            ],
+            "note": "На данный момент эту услугу не предоставляем."
+          },
+          {
+            "id": "buttocks",
+            "title": "Ягодицы, до 30 минут",
+            "status": "paused",
+            "variants": [
+              {
+                "id": "standard",
+                "label": "",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 700
+                },
+                "source": "antitsellyulitnyy-massazh"
+              }
+            ],
+            "note": "На данный момент эту услугу не предоставляем."
+          },
+          {
+            "id": "legs",
+            "title": "Ноги, до 30 минут",
+            "status": "paused",
+            "variants": [
+              {
+                "id": "standard",
+                "label": "",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 1000
+                },
+                "source": "antitsellyulitnyy-massazh"
+              }
+            ],
+            "note": "На данный момент эту услугу не предоставляем."
+          },
+          {
+            "id": "legs-buttocks",
+            "title": "Ноги и ягодицы, до 50 минут",
+            "status": "paused",
+            "variants": [
+              {
+                "id": "standard",
+                "label": "",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 1700
+                },
+                "source": "antitsellyulitnyy-massazh"
+              }
+            ],
+            "note": "На данный момент эту услугу не предоставляем."
+          },
+          {
+            "id": "arms",
+            "title": "Руки, до 30 минут",
+            "status": "paused",
+            "variants": [
+              {
+                "id": "standard",
+                "label": "",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 600
+                },
+                "source": "antitsellyulitnyy-massazh"
+              }
+            ],
+            "note": "На данный момент эту услугу не предоставляем."
+          }
+        ]
+      }
+    ],
+    "slug": "massazh",
+    "summary": "Массаж головы, спины и воротниковой зоны.",
+    "description": "Массаж головы, спины и воротниковой зоны. В прайсе указаны продолжительность и стоимость каждого сеанса.",
+    "metaDescription": "Массаж в салоне «Юлия Дубицкая»: голова, спина, воротниковая зона. Стоимость сеансов на 30 и 50 минут. Октябрьская, 35, запись по телефону.",
+    "sources": [
+      "massazh-po-zonam"
+    ]
+  },
+  {
+    "id": "body",
+    "title": "Уход за телом",
+    "status": "paused",
+    "groups": [
+      {
+        "id": "massage",
+        "title": "СПА-массаж",
+        "services": [
+          {
+            "id": "hollywood",
+            "title": "HOLLYWOOD FASE LIFTING, 40 минут",
+            "status": "paused",
+            "variants": [
+              {
+                "id": "standard",
+                "label": "",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 1200
+                },
+                "source": "ukhod-po-telu"
+              }
+            ],
+            "note": "В начале раздела: «Временно эту услугу не оказываем». Область действия предупреждения требует подтверждения."
+          },
+          {
+            "id": "aroma",
+            "title": "AROMATHERAPY, 90 минут",
+            "status": "paused",
+            "variants": [
+              {
+                "id": "standard",
+                "label": "",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 2800
+                },
+                "source": "ukhod-po-telu"
+              }
+            ],
+            "note": "В начале раздела: «Временно эту услугу не оказываем». Область действия предупреждения требует подтверждения."
+          },
+          {
+            "id": "hotstone",
+            "title": "HOTSTONE, горячие филиппинские ракушки, 60 минут",
+            "status": "paused",
+            "variants": [
+              {
+                "id": "standard",
+                "label": "",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 2300
+                },
+                "source": "ukhod-po-telu"
+              }
+            ],
+            "note": "В начале раздела: «Временно эту услугу не оказываем». Область действия предупреждения требует подтверждения."
+          },
+          {
+            "id": "honey",
+            "title": "МЭЛИ, медовый массаж спины и маска лица, 80 минут",
+            "status": "paused",
+            "variants": [
+              {
+                "id": "standard",
+                "label": "",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 2500
+                },
+                "source": "ukhod-po-telu"
+              }
+            ],
+            "note": "В начале раздела: «Временно эту услугу не оказываем». Область действия предупреждения требует подтверждения."
+          },
+          {
+            "id": "amber",
+            "title": "Янтарный массаж, 60 минут",
+            "status": "paused",
+            "variants": [
+              {
+                "id": "standard",
+                "label": "",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 2200
+                },
+                "source": "ukhod-po-telu"
+              }
+            ],
+            "note": "В начале раздела: «Временно эту услугу не оказываем». Область действия предупреждения требует подтверждения."
+          },
+          {
+            "id": "ayurveda",
+            "title": "Аюрведа, горячие мешочки с травами, 60 минут",
+            "status": "paused",
+            "variants": [
+              {
+                "id": "standard",
+                "label": "",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 3000
+                },
+                "source": "ukhod-po-telu"
+              }
+            ],
+            "note": "В начале раздела: «Временно эту услугу не оказываем». Область действия предупреждения требует подтверждения."
+          }
+        ]
+      },
+      {
+        "id": "peeling",
+        "title": "Пилинг тела",
+        "services": [
+          {
+            "id": "sugar",
+            "title": "Сахарный пилинг тела, 60 минут",
+            "status": "needs-confirmation",
+            "variants": [
+              {
+                "id": "standard",
+                "label": "",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 1800
+                },
+                "source": "piling-1"
+              }
+            ],
+            "note": "Родительский раздел приостановлен. Ароматы: горячая лаванда, зелёный чай, молочный блюз, морские водоросли, мятная свежесть, лепестки роз, клубничный аромат, восточный сандал, королевский жасмин, бодрящий лимон, волшебная олива."
+          },
+          {
+            "id": "salt",
+            "title": "Соляной пилинг тела, 60 минут",
+            "status": "needs-confirmation",
+            "variants": [
+              {
+                "id": "standard",
+                "label": "",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 1800
+                },
+                "source": "piling-1"
+              }
+            ],
+            "note": "Родительский раздел приостановлен. Ароматы: горячая лаванда, зелёный чай, молочный блюз, морские водоросли, мятная свежесть, лепестки роз, клубничный аромат, восточный сандал, королевский жасмин, бодрящий лимон, волшебная олива."
+          }
+        ]
+      },
+      {
+        "id": "wraps",
+        "title": "Обёртывания",
+        "services": [
+          {
+            "id": "chocolate",
+            "title": "LOMI–ANANDA, шоколадное обёртывание, 120 минут",
+            "status": "needs-confirmation",
+            "variants": [
+              {
+                "id": "standard",
+                "label": "",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 3500
+                },
+                "source": "obertyvaniye"
+              }
+            ],
+            "note": "Родительский раздел приостановлен. Подтвердить доступность."
+          },
+          {
+            "id": "laminaria",
+            "title": "Ламинария, водорослевое обёртывание, 90 минут",
+            "status": "needs-confirmation",
+            "variants": [
+              {
+                "id": "standard",
+                "label": "",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 3000
+                },
+                "source": "obertyvaniye"
+              }
+            ],
+            "note": "Родительский раздел приостановлен. Подтвердить доступность."
+          },
+          {
+            "id": "honey",
+            "title": "МЭЛИ, медовое обёртывание, 160 минут",
+            "status": "needs-confirmation",
+            "variants": [
+              {
+                "id": "standard",
+                "label": "",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 3200
+                },
+                "source": "obertyvaniye"
+              }
+            ],
+            "note": "Родительский раздел приостановлен. Подтвердить доступность."
+          },
+          {
+            "id": "cherry",
+            "title": "Черешня в шоколаде, авторский массаж, 140 минут",
+            "status": "needs-confirmation",
+            "variants": [
+              {
+                "id": "standard",
+                "label": "",
+                "price": {
+                  "kind": "fixed",
+                  "amount": 4000
+                },
+                "source": "obertyvaniye"
+              }
+            ],
+            "note": "Родительский раздел приостановлен. Подтвердить доступность."
+          }
+        ]
+      }
+    ],
+    "slug": "uhod-za-telom",
+    "summary": "",
+    "description": "",
+    "metaDescription": "",
+    "sources": [
+      "ukhod-po-telu"
+    ]
+  }
+]

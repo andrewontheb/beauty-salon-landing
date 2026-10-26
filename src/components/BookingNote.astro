@@ -1,0 +1,15 @@
+---
+import CallLink from './CallLink.astro';
+import { salon } from '../data/salon';
+---
+<aside class="booking-note" aria-label="Запись в салон">
+  <div>
+    <h2>Выбрали услугу?</h2>
+    <p>{salon.appointment}</p>
+    <p class="muted">{salon.hours}</p>
+  </div>
+  <div class="booking-action">
+    <CallLink />
+    <a class="text-link" href="/#contacts">Адрес и часы работы</a>
+  </div>
+</aside>

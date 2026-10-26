@@ -1,0 +1,56 @@
+[
+  {
+    "id": "hair-polish",
+    "title": "Полировка волос",
+    "duration": "30 минут",
+    "source": "aktsii",
+    "status": "needs-confirmation",
+    "terms": "Срок, период действия и дополнительные условия не указаны. Ценовой вариант сохранён в catalog.json: hair/care/polishing.",
+    "priceRef": "hair/care/polishing/standard"
+  },
+  {
+    "id": "face-rejuvenating",
+    "title": "Омолаживающий массаж лица",
+    "duration": "20 минут",
+    "source": "aktsii",
+    "status": "needs-confirmation",
+    "terms": "Срок, период действия и дополнительные условия не указаны.",
+    "priceRef": "face/massage/promo-rejuvenating/standard"
+  },
+  {
+    "id": "face-antistress",
+    "title": "Антистрессовый массаж лица",
+    "duration": "20 минут",
+    "source": "aktsii",
+    "status": "needs-confirmation",
+    "terms": "Срок, период действия и дополнительные условия не указаны.",
+    "priceRef": "face/massage/promo-antistress/standard"
+  },
+  {
+    "id": "neck",
+    "title": "Массаж воротниковой зоны",
+    "duration": "15 минут",
+    "source": "aktsii",
+    "status": "needs-confirmation",
+    "terms": "В обычном прайсе 30 минут — 1 000 ₽; это другая длительность, прямой конфликт цены не установлен.",
+    "priceRef": "massage/zones/promo-neck/standard"
+  },
+  {
+    "id": "face-fit",
+    "title": "FACE FIT «Детокс для кожи»",
+    "duration": "10 минут",
+    "source": "aktsii",
+    "status": "needs-confirmation",
+    "terms": "Срок действия не указан. На странице сказано «доступно только в салоне».",
+    "priceRef": "face/care/face-fit/standard"
+  },
+  {
+    "id": "hydro-plus",
+    "title": "HYDRO PLUS",
+    "duration": "45 минут",
+    "source": "aktsii",
+    "status": "needs-confirmation",
+    "terms": "Рекомендованный курс — 4 процедуры, срок не указан. Совпадает с обычным прайсом: face/care/hydro-plus/face; наличие скидки не заявляем.",
+    "priceRef": "face/care/hydro-plus/face"
+  }
+]

@@ -1,0 +1,56 @@
+---
+import Layout from '../layouts/Layout.astro';
+import CallLink from '../components/CallLink.astro';
+import PriceSample from '../components/PriceSample.astro';
+import DirectionList from '../components/DirectionList.astro';
+import Contacts from '../components/Contacts.astro';
+import { salon, home } from '../data/salon';
+import interior from '../assets/salon.webp';
+---
+<Layout title="Юлия Дубицкая — салон красоты на Октябрьской, Москва" description="Салон красоты «Юлия Дубицкая» в Марьиной Роще. Стрижки, уход за лицом, маникюр и педикюр. Октябрьская, 35. Запись: +7 (495) 689-17-16.">
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <p class="location"><span aria-hidden="true" class="location-dot"></span>{salon.district}, Москва</p>
+        <h1 id="hero-title">Ваш салон<br /> на Октябрьской</h1>
+        <p class="hero-description">{home.description}</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="/uslugi/">Посмотреть услуги и цены</a>
+          <CallLink class="hero-call" />
+        </div>
+        <p class="hero-hours">{salon.hours}</p>
+      </div>
+      <figure class="hero-photo">
+        <div class="photo-mat">
+          <img src={interior.src} width={interior.width} height={interior.height}
+            alt="Парикмахерский зал салона «Юлия Дубицкая»: рабочие места, зеркала и красная мебель"
+            loading="eager" fetchpriority="high" decoding="async" />
+          <span class="photo-caption">Юлия Дубицкая<span>Салон красоты</span></span>
+        </div>
+        <figcaption>Наш салон на Октябрьской, 35</figcaption>
+      </figure>
+    </div>
+  </section>
+  <section id="about" class="about section" aria-labelledby="about-title" tabindex="-1">
+    <div class="container about-grid">
+      <h2 id="about-title">Знакомое место.<br /> Внимание к вам.</h2>
+      <div><p class="about-copy">{home.about}</p><p class="muted">Выберите услугу в прайсе или позвоните — мы поможем с записью.</p></div>
+    </div>
+    <dl class="container salon-facts">
+      <div><dt>Время работы</dt><dd>{salon.hours}</dd></div>
+      <div><dt>В Марьиной Роще</dt><dd>{salon.address}</dd></div>
+      <div><dt>По предварительной записи</dt><dd>{salon.extraHours}</dd></div>
+    </dl>
+  </section>
+  <section id="services" class="section home-directions" aria-labelledby="directions-title" tabindex="-1">
+    <div class="container">
+      <div class="section-heading">
+        <h2 id="directions-title">Что вас интересует?</h2>
+        <p class="section-description">Выберите направление — описание процедур и цены на одной странице.</p>
+      </div>
+      <DirectionList />
+    </div>
+  </section>
+  <PriceSample />
+  <Contacts />
+</Layout>

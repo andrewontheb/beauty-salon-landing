@@ -1,0 +1,13 @@
+---
+import { formatPrice, type Service } from '../data/catalog';
+interface Props { service: Service; path: string; }
+const { service, path } = Astro.props;
+---
+<dl class:list={['service-prices', { 'single-price': service.variants.length === 1 && !service.variants[0].label }]}>
+  {service.variants.map((variant) => (
+    <div class="price-variant" data-price-ref={`${path}/${variant.id}`}>
+      <dt>{variant.label || 'Стоимость'}</dt>
+      <dd>{formatPrice(variant.price)}{variant.unit && <small> / {variant.unit}</small>}</dd>
+    </div>
+  ))}
+</dl>

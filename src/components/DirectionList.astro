@@ -1,0 +1,11 @@
+---
+import { publicCatalog, directionHref } from '../data/catalog';
+---
+<div class="direction-list">
+  {publicCatalog.map((direction) => (
+    <a class="direction-link" href={directionHref(direction)}>
+      <span><span class="direction-title">{direction.title}</span><span class="direction-summary">{direction.summary}</span></span>
+      <span class="direction-arrow" aria-hidden="true">↗</span>
+    </a>
+  ))}
+</div>

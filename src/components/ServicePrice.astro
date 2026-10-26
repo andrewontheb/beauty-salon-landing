@@ -1,0 +1,20 @@
+---
+import { type Service } from '../data/catalog';
+import PriceVariants from './PriceVariants.astro';
+interface Props { service: Service; path: string; }
+const { service, path } = Astro.props;
+const anchor = `${path.split('/')[1]}-${service.id}`;
+---
+<article class="service-row" id={`service-${anchor}`} data-service={path} aria-labelledby={`title-${anchor}`}>
+  <div class="service-description">
+    <h3 id={`title-${anchor}`}>{service.title}</h3>
+    {service.description && <p>{service.description}</p>}
+    {service.publicNote && <p class="service-note">{service.publicNote}</p>}
+  </div>
+  {service.variants.length > 4 ? (
+    <details class="variant-details" open>
+      <summary>Варианты стоимости ({service.variants.length})</summary>
+      <PriceVariants service={service} path={path} />
+    </details>
+  ) : <PriceVariants service={service} path={path} />}
+</article>

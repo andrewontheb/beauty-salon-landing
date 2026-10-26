@@ -1,0 +1,45 @@
+---
+import CallLink from './CallLink.astro';
+import { salon } from '../data/salon';
+---
+<section id="contacts" class="contact-section" aria-labelledby="contact-title" tabindex="-1">
+  <div class="container contact-grid">
+    <div>
+      <h2 id="contact-title">Будем рады<br /> вашему звонку</h2>
+      <p>{salon.appointment}</p>
+      <CallLink class="contact-phone" label={salon.phone} />
+      <span class="contact-call-label">Запись по телефону</span>
+    </div>
+    <div class="contact-details">
+      <h3>Как нас найти</h3>
+      <address>{salon.address}<span>{salon.district}</span></address>
+      <a class="text-link contact-map-link" href={salon.map.placeUrl} target="_blank" rel="noopener noreferrer">
+        Открыть в Яндекс Картах<span class="visually-hidden"> (в новой вкладке)</span>
+      </a>
+      <div class="contact-hours">
+        <h3>Когда приходить</h3>
+        <p>{salon.hours}</p>
+        <p class="extra-hours">{salon.extraHours}</p>
+      </div>
+    </div>
+  </div>
+  <div class="container contact-map">
+    <details class="contact-map-controls">
+      <summary>
+        <span class="map-enable">Включить управление картой</span>
+        <span class="map-disable">Отключить управление картой</span>
+      </summary>
+      <p>Управляйте картой мышью или касанием. Чтобы снова прокручивать страницу над картой, отключите управление.</p>
+    </details>
+    <iframe
+      id="salon-map"
+      src={salon.map.embedUrl}
+      title={salon.map.title}
+      width="1280"
+      height="380"
+      loading="lazy"
+      referrerpolicy="strict-origin-when-cross-origin"
+      allowfullscreen
+    ></iframe>
+  </div>
+</section>

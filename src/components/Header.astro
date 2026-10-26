@@ -1,0 +1,22 @@
+---
+import CallLink from './CallLink.astro';
+import { salon } from '../data/salon';
+const isCatalog = Astro.url.pathname === '/uslugi/';
+---
+<header class="site-header">
+  <div class="topline">
+    <div class="container topline-inner"><span>{salon.address}</span><span>{salon.hours}</span></div>
+  </div>
+  <div class="container header-inner">
+    <a class="brand" href="/" aria-label="Юлия Дубицкая — главная">
+      <span class="brand-name">Юлия Дубицкая</span>
+      <span class="brand-description">Салон красоты</span>
+    </a>
+    <nav aria-label="Основная навигация">
+      <a href="/#about">О салоне</a>
+      <a href="/uslugi/" aria-current={isCatalog ? 'page' : undefined}>Услуги и цены</a>
+      <a href="/#contacts">Контакты</a>
+    </nav>
+    <CallLink label={salon.phone} class="header-phone" />
+  </div>
+</header>

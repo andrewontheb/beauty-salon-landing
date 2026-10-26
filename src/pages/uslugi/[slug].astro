@@ -1,0 +1,55 @@
+---
+import type { GetStaticPaths } from 'astro';
+import Layout from '../../layouts/Layout.astro';
+import BookingNote from '../../components/BookingNote.astro';
+import CallLink from '../../components/CallLink.astro';
+import ServicePrice from '../../components/ServicePrice.astro';
+import { publicCatalog, directionHref, type PublicDirection } from '../../data/catalog';
+
+export const getStaticPaths = (() => publicCatalog.map((direction) => ({
+  params: { slug: direction.slug }, props: { direction },
+}))) satisfies GetStaticPaths;
+interface Props { direction: PublicDirection; }
+const { direction } = Astro.props;
+const related = publicCatalog.filter((item) => item.id !== direction.id);
+---
+<Layout title={`${direction.title}: цены — салон Юлия Дубицкая, Москва`} description={direction.metaDescription}>
+  <div class="container direction-page">
+    <nav class="breadcrumbs" aria-label="Хлебные крошки">
+      <a href="/">Главная</a><span aria-hidden="true">/</span><a href="/uslugi/">Услуги и цены</a><span aria-hidden="true">/</span><span aria-current="page">{direction.title}</span>
+    </nav>
+    <header class="direction-heading">
+      <div><h1>{direction.title}</h1><p>{direction.description}</p></div>
+      <div class="direction-booking"><CallLink /><a class="text-link" href="/#contacts">Как нас найти</a></div>
+    </header>
+    <div class="full-price-layout">
+      <aside class="group-sidebar">
+        <nav id="price-navigation" aria-label="Группы услуг" tabindex="-1">
+          <h2>В этом разделе</h2>
+          <ul>{direction.groups.map((group) => <li><a href={`#${group.id}`}>{group.title}</a></li>)}</ul>
+        </nav>
+        <p>Цены указаны в рублях.<br />Запись — по телефону.</p>
+        <a class="text-link" href="/uslugi/">Все направления</a>
+      </aside>
+      <div class="full-price-groups">
+        {direction.groups.map((group) => (
+          <section id={group.id} class="full-price-group" aria-labelledby={`group-title-${group.id}`} tabindex="-1">
+            <header>
+              <h2 id={`group-title-${group.id}`}>{group.title}</h2>
+              {group.description && <p>{group.description}</p>}
+              {group.publicNote && <p class="group-note">{group.publicNote}</p>}
+            </header>
+            {group.services.map((service) => <ServicePrice service={service} path={`${direction.id}/${group.id}/${service.id}`} />)}
+            <div class="group-bottom"><a href="#price-navigation">К группам услуг</a><CallLink class="text-link" /></div>
+          </section>
+        ))}
+        <p class="price-clarification">Не все услуги салона представлены в прайсе. Наличие других процедур и подробности стоимости можно уточнить по телефону.</p>
+      </div>
+    </div>
+    <BookingNote />
+    <nav class="related-directions" aria-label="Другие направления">
+      <h2>Другие направления</h2>
+      <ul>{related.map((item) => <li><a href={directionHref(item)}>{item.title}</a></li>)}</ul>
+    </nav>
+  </div>
+</Layout>
