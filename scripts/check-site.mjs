@@ -1,9 +1,15 @@
 import assert from 'node:assert/strict';
 import { readFile, readdir, access } from 'node:fs/promises';
 import { resolve, dirname } from 'node:path';
+import config from '../astro.config.mjs';
 
 const root = resolve(import.meta.dirname, '..');
 const dist = resolve(root, 'dist');
+const base = `${(config.base || '/').replace(/\/+$/, '')}/`;
+const localPath = pathname => {
+  assert(pathname.startsWith(base), `Ссылка вне base ${base}: ${pathname}`);
+  return `/${pathname.slice(base.length)}`;
+};
 const catalog = JSON.parse(await readFile(resolve(root, 'src/data/catalog.json'), 'utf8'));
 const publicDirections = catalog.filter(d => d.status === 'source').map(d => ({
   ...d, groups: d.groups.map(g => ({...g, services: g.services.filter(s =>
@@ -63,19 +69,22 @@ for (const direction of publicDirections) {
 }
 let links = 0;
 for (const [route, page] of pages) {
+  let calls = 0;
   for (const href of matches(page.html, /\bhref="([^"]+)"/g)) {
-    if (href.startsWith('tel:')) { assert.equal(href, 'tel:+74956891716'); continue; }
-    const target = new URL(href.replaceAll('&amp;', '&'), `http://local${route}`);
+    if (href.startsWith('tel:')) { assert.equal(href, 'tel:+74956891716'); calls++; continue; }
+    const target = new URL(href.replaceAll('&amp;', '&'), `http://local${base}${route.slice(1)}`);
     if (target.origin !== 'http://local') continue;
-    if (/\.(css|svg|webp|png)$/.test(target.pathname)) { await access(resolve(dist, `.${target.pathname}`)); continue; }
-    const destination = pages.get(target.pathname);
+    const pathname = localPath(target.pathname);
+    if (/\.(css|svg|webp|png)$/.test(pathname)) { await access(resolve(dist, `.${pathname}`)); continue; }
+    const destination = pages.get(pathname);
     assert(destination, `Нет маршрута: ${route} → ${target.pathname}`);
     if (target.hash) assert(destination.ids.has(decodeURIComponent(target.hash.slice(1))), `Нет якоря: ${route} → ${href}`);
     links++;
   }
+  assert(calls > 0, `Нет ссылки звонка: ${route}`);
   for (const src of matches(page.html, /<img[^>]*\bsrc="([^"]+)"/g)) {
     assert(src.startsWith('/'), `Нелокальное фото: ${src}`);
-    await access(resolve(dist, `.${src}`));
+    await access(resolve(dist, `.${localPath(src)}`));
   }
 }
 assert.match(await readFile(resolve(dist, 'robots.txt'), 'utf8'), /Disallow: \/\s*$/);
@@ -86,4 +95,4 @@ for (const match of inventory.matchAll(/^\| `\/[^`]*` \| `([^`]+)`/gm)) {
   assert(page, `Нет маршрута из карты переноса: ${match[1]}`);
   if (target.hash) assert(page.ids.has(target.hash.slice(1)), `Нет якоря из карты переноса: ${match[1]}`);
 }
-console.log(`Проверено: ${pages.size} страниц, ${allowed.size} разрешённых услуг, ${prices.size} вариантов цен, ${links} внутренних ссылок. Ошибок нет.`);
+console.log(`Проверено с base=${base}: ${pages.size} страниц, ${allowed.size} разрешённых услуг, ${prices.size} вариантов цен, ${links} внутренних ссылок. Ошибок нет.`);

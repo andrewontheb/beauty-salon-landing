@@ -1,3 +1,4 @@
+import { siteHref } from '../utils/urls';
 import { z } from 'zod';
 import catalogData from './catalog.json';
 import sourcePages from './source-pages.json';
@@ -88,7 +89,7 @@ for (const direction of publicCatalog) {
   }
 }
 export type PublicDirection = (typeof publicCatalog)[number];
-export const directionHref = (direction: Pick<PublicDirection, 'slug'>) => `/uslugi/${direction.slug}/`;
+export const directionHref = (direction: Pick<PublicDirection, 'slug'>) => siteHref(`/uslugi/${direction.slug}/`);
 
 // Главная хранит ссылки на услуги, а не независимые копии их цен.
 export const priceSamples = [

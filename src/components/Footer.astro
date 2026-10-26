@@ -1,12 +1,13 @@
 ---
+import { siteHref } from '../utils/urls';
 import { salon } from '../data/salon';
 ---
 <footer class="site-footer">
   <div class="container footer-inner">
-    <a href="/">Салон красоты «{salon.name}»</a>
+    <a href={siteHref('/')}>Салон красоты «{salon.name}»</a>
     <nav aria-label="Навигация в подвале">
-      <a href="/uslugi/">Услуги и цены</a>
-      <a href="/#contacts">Контакты</a>
+      <a href={siteHref('/uslugi/')}>Услуги и цены</a>
+      <a href={siteHref('/#contacts')}>Контакты</a>
       <a href="#top">Наверх <span aria-hidden="true">↑</span></a>
     </nav>
   </div>

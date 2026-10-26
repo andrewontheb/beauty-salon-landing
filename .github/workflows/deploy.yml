@@ -1,0 +1,50 @@
+name: Демонстрация на GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+# Основа: https://docs.astro.build/en/guides/deploy/github/
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: read
+    steps:
+      - name: Получить исходники
+        uses: actions/checkout@v7
+      - name: Определить адрес GitHub Pages
+        id: pages
+        uses: actions/configure-pages@v5
+      - name: Проверить, собрать и загрузить артефакт
+        uses: withastro/action@v6
+        with:
+          node-version: '24'
+          # npm и зависимости определяются по package-lock.json.
+          build-cmd: npm run check && npm run build && npm run check:site
+        env:
+          SITE_URL: ${{ steps.pages.outputs.origin }}
+          BASE_PATH: ${{ steps.pages.outputs.base_path }}
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Опубликовать демонстрацию
+        id: deployment
+        uses: actions/deploy-pages@v5

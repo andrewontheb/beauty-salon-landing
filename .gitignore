@@ -7,3 +7,8 @@ dist/
 output/
 .playwright-cli/
 .DS_Store
+*.log
+*.tsbuildinfo
+coverage/
+playwright-report/
+test-results/

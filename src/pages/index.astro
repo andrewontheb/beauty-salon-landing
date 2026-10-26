@@ -1,4 +1,5 @@
 ---
+import { siteHref } from '../utils/urls';
 import Layout from '../layouts/Layout.astro';
 import CallLink from '../components/CallLink.astro';
 import PriceSample from '../components/PriceSample.astro';
@@ -15,7 +16,7 @@ import interior from '../assets/salon.webp';
         <h1 id="hero-title">Ваш салон<br /> на Октябрьской</h1>
         <p class="hero-description">{home.description}</p>
         <div class="hero-actions">
-          <a class="button button-primary" href="/uslugi/">Посмотреть услуги и цены</a>
+          <a class="button button-primary" href={siteHref('/uslugi/')}>Посмотреть услуги и цены</a>
           <CallLink class="hero-call" />
         </div>
         <p class="hero-hours">{salon.hours}</p>

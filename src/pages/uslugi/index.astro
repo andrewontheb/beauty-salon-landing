@@ -1,11 +1,12 @@
 ---
+import { siteHref } from '../../utils/urls';
 import Layout from '../../layouts/Layout.astro';
 import DirectionList from '../../components/DirectionList.astro';
 import BookingNote from '../../components/BookingNote.astro';
 ---
 <Layout title="Услуги и цены — салон красоты Юлия Дубицкая, Москва" description="Каталог услуг салона «Юлия Дубицкая»: волосы, маникюр, педикюр, уход за лицом, брови и ресницы, макияж, депиляция, татуаж, пирсинг и массаж. Цены и запись.">
   <div class="container catalog-page">
-    <nav class="breadcrumbs" aria-label="Хлебные крошки"><a href="/">Главная</a><span aria-hidden="true">/</span><span aria-current="page">Услуги и цены</span></nav>
+    <nav class="breadcrumbs" aria-label="Хлебные крошки"><a href={siteHref('/')}>Главная</a><span aria-hidden="true">/</span><span aria-current="page">Услуги и цены</span></nav>
     <header class="catalog-heading">
       <h1>Услуги и цены</h1>
       <p>Найдите нужную процедуру. В каждом направлении — описание, варианты стоимости и важные условия.</p>
