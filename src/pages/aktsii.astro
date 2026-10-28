@@ -3,6 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import CallLink from '../components/CallLink.astro';
 import BookingNote from '../components/BookingNote.astro';
 import PromotionIcon from '../components/PromotionIcon.astro';
+import OfferIcon from '../components/OfferIcon.astro';
 import { publicPromotions } from '../data/catalog';
 import PriceVariants from '../components/PriceVariants.astro';
 import { siteHref } from '../utils/urls';
@@ -16,7 +17,7 @@ import { siteHref } from '../utils/urls';
     </header>
     <div class="promotion-grid">
       {publicPromotions.map((promotion) => <article id={promotion.id} class="promotion-card" data-promotion={promotion.id}>
-        <p class="promotion-duration">{promotion.duration}</p>
+        <div class="promotion-card-top"><p class="promotion-duration">{promotion.duration}</p><OfferIcon id={promotion.id} /></div>
         <h2>{promotion.title}</h2>
         <p class="promotion-description">{promotion.description}</p>
         {promotion.publicNote && <p class="promotion-note">{promotion.publicNote}</p>}

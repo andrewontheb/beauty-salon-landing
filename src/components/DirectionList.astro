@@ -8,10 +8,9 @@ const { illustrated = false } = Astro.props;
 <div class:list={['direction-list', { 'direction-list-illustrated': illustrated }]}>
   {publicCatalog.map((direction) => (
     <a class="direction-link" href={directionHref(direction)}>
-      {illustrated && <Image src={directionImages[direction.id]} alt="" width={144} height={108} widths={[144, 288]} sizes="(max-width: 600px) 88px, 144px" format="webp" loading="lazy" class="direction-thumbnail" />}
+      {illustrated && <Image src={directionImages[direction.id]} alt="" width={110} widths={[110, 220]} sizes="(max-width: 600px) 82px, 110px" format="webp" loading="lazy" class="direction-thumbnail" />}
       <span><span class="direction-title">{direction.title}</span><span class="direction-summary">{direction.summary}</span></span>
       <span class="direction-arrow" aria-hidden="true">↗</span>
     </a>
   ))}
 </div>
-{illustrated && <p class="image-disclosure">Изображения направлений — AI-иллюстрации, не фотографии работ салона.</p>}

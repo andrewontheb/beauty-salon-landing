@@ -26,8 +26,7 @@ const related = publicCatalog.filter((item) => item.id !== direction.id);
         <div class="direction-booking"><CallLink /><a class="text-link" href={siteHref('/#contacts')}>Как нас найти</a></div>
       </div>
       <figure class="direction-visual">
-        <Image src={directionImages[direction.id]} alt="" width={480} height={280} widths={[320, 480, 720, 960]} sizes="(max-width: 600px) calc(100vw - 48px), (max-width: 900px) 36vw, 40vw" format="webp" loading="eager" />
-        <figcaption>AI-иллюстрация, не работа салона</figcaption>
+        <Image src={directionImages[direction.id]} alt="" width={165} widths={[165, 275]} sizes="(max-width: 600px) 96px, 165px" format="webp" loading="eager" />
       </figure>
     </header>
     <div class="full-price-layout">
