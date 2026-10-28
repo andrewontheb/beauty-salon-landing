@@ -32,6 +32,7 @@ jobs:
           # npm и зависимости определяются по package-lock.json.
           build-cmd: npm run check && npm run build && npm run check:site
         env:
+          SEO_MODE: demo
           SITE_URL: ${{ steps.pages.outputs.origin }}
           BASE_PATH: ${{ steps.pages.outputs.base_path }}
 

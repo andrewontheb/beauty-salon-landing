@@ -10,5 +10,6 @@ output/
 *.log
 *.tsbuildinfo
 coverage/
+incoming/
 playwright-report/
 test-results/

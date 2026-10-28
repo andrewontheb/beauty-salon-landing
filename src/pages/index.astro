@@ -5,6 +5,8 @@ import CallLink from '../components/CallLink.astro';
 import PriceSample from '../components/PriceSample.astro';
 import DirectionList from '../components/DirectionList.astro';
 import Contacts from '../components/Contacts.astro';
+import Gallery from '../components/Gallery.astro';
+import PromotionIcon from '../components/PromotionIcon.astro';
 import { salon, home } from '../data/salon';
 import interior from '../assets/salon.webp';
 ---
@@ -42,6 +44,7 @@ import interior from '../assets/salon.webp';
       <div><dt>В Марьиной Роще</dt><dd>{salon.address}</dd></div>
       <div><dt>По предварительной записи</dt><dd>{salon.extraHours}</dd></div>
     </dl>
+    <Gallery />
   </section>
   <section id="services" class="section home-directions" aria-labelledby="directions-title" tabindex="-1">
     <div class="container">
@@ -49,9 +52,16 @@ import interior from '../assets/salon.webp';
         <h2 id="directions-title">Что вас интересует?</h2>
         <p class="section-description">Выберите направление — описание процедур и цены на одной странице.</p>
       </div>
-      <DirectionList />
+      <DirectionList illustrated />
     </div>
   </section>
   <PriceSample />
+  <section id="promotions" class="section" aria-labelledby="promotions-title" tabindex="-1">
+    <div class="container promotion-teaser">
+      <PromotionIcon />
+      <div><h2 id="promotions-title">Акции и предложения</h2><p>Полировка волос, массаж и уход за лицом. Посмотрите процедуры, длительность и стоимость.</p></div>
+      <a class="button button-primary" href={siteHref('/aktsii/')}>Посмотреть предложения</a>
+    </div>
+  </section>
   <Contacts />
 </Layout>

@@ -6,6 +6,8 @@ import BookingNote from '../../components/BookingNote.astro';
 import CallLink from '../../components/CallLink.astro';
 import ServicePrice from '../../components/ServicePrice.astro';
 import { publicCatalog, directionHref, type PublicDirection } from '../../data/catalog';
+import { Image } from 'astro:assets';
+import { directionImages } from '../../data/direction-images';
 
 export const getStaticPaths = (() => publicCatalog.map((direction) => ({
   params: { slug: direction.slug }, props: { direction },
@@ -14,14 +16,19 @@ interface Props { direction: PublicDirection; }
 const { direction } = Astro.props;
 const related = publicCatalog.filter((item) => item.id !== direction.id);
 ---
-<Layout title={`${direction.title}: цены — салон Юлия Дубицкая, Москва`} description={direction.metaDescription}>
+<Layout breadcrumbs={[{ name: 'Услуги и цены', path: '/uslugi/' }, { name: direction.title, path: `/uslugi/${direction.slug}/` }]} title={`${direction.title}: цены — салон Юлия Дубицкая, Москва`} description={direction.metaDescription}>
   <div class="container direction-page">
     <nav class="breadcrumbs" aria-label="Хлебные крошки">
       <a href={siteHref('/')}>Главная</a><span aria-hidden="true">/</span><a href={siteHref('/uslugi/')}>Услуги и цены</a><span aria-hidden="true">/</span><span aria-current="page">{direction.title}</span>
     </nav>
-    <header class="direction-heading">
-      <div><h1>{direction.title}</h1><p>{direction.description}</p></div>
-      <div class="direction-booking"><CallLink /><a class="text-link" href={siteHref('/#contacts')}>Как нас найти</a></div>
+    <header class="direction-heading direction-heading-illustrated">
+      <div><h1>{direction.title}</h1><p>{direction.description}</p>
+        <div class="direction-booking"><CallLink /><a class="text-link" href={siteHref('/#contacts')}>Как нас найти</a></div>
+      </div>
+      <figure class="direction-visual">
+        <Image src={directionImages[direction.id]} alt="" width={480} height={280} widths={[320, 480, 720, 960]} sizes="(max-width: 600px) calc(100vw - 48px), (max-width: 900px) 36vw, 40vw" format="webp" loading="eager" />
+        <figcaption>AI-иллюстрация, не работа салона</figcaption>
+      </figure>
     </header>
     <div class="full-price-layout">
       <aside class="group-sidebar">

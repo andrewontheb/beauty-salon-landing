@@ -6,7 +6,10 @@
     "source": "aktsii",
     "status": "needs-confirmation",
     "terms": "Срок, период действия и дополнительные условия не указаны. Ценовой вариант сохранён в catalog.json: hair/care/polishing.",
-    "priceRef": "hair/care/polishing/standard"
+    "priceRef": "hair/care/polishing/standard",
+    "publish": true,
+    "description": "Полировка волос с сохранением длины.",
+    "publicNote": ""
   },
   {
     "id": "face-rejuvenating",
@@ -15,7 +18,10 @@
     "source": "aktsii",
     "status": "needs-confirmation",
     "terms": "Срок, период действия и дополнительные условия не указаны.",
-    "priceRef": "face/massage/promo-rejuvenating/standard"
+    "priceRef": "face/massage/promo-rejuvenating/standard",
+    "publish": true,
+    "description": "Массаж лица: сеанс продолжительностью 20 минут.",
+    "publicNote": ""
   },
   {
     "id": "face-antistress",
@@ -24,7 +30,10 @@
     "source": "aktsii",
     "status": "needs-confirmation",
     "terms": "Срок, период действия и дополнительные условия не указаны.",
-    "priceRef": "face/massage/promo-antistress/standard"
+    "priceRef": "face/massage/promo-antistress/standard",
+    "publish": true,
+    "description": "Массаж лица: сеанс продолжительностью 20 минут.",
+    "publicNote": ""
   },
   {
     "id": "neck",
@@ -33,7 +42,10 @@
     "source": "aktsii",
     "status": "needs-confirmation",
     "terms": "В обычном прайсе 30 минут — 1 000 ₽; это другая длительность, прямой конфликт цены не установлен.",
-    "priceRef": "massage/zones/promo-neck/standard"
+    "priceRef": "massage/zones/promo-neck/standard",
+    "publish": true,
+    "description": "Короткий сеанс массажа шейно-воротниковой зоны.",
+    "publicNote": ""
   },
   {
     "id": "face-fit",
@@ -42,7 +54,10 @@
     "source": "aktsii",
     "status": "needs-confirmation",
     "terms": "Срок действия не указан. На странице сказано «доступно только в салоне».",
-    "priceRef": "face/care/face-fit/standard"
+    "priceRef": "face/care/face-fit/standard",
+    "publish": true,
+    "description": "Экспресс-процедура ухода за кожей лица.",
+    "publicNote": "Доступно только в салоне."
   },
   {
     "id": "hydro-plus",
@@ -51,6 +66,9 @@
     "source": "aktsii",
     "status": "needs-confirmation",
     "terms": "Рекомендованный курс — 4 процедуры, срок не указан. Совпадает с обычным прайсом: face/care/hydro-plus/face; наличие скидки не заявляем.",
-    "priceRef": "face/care/hydro-plus/face"
+    "priceRef": "face/care/hydro-plus/face",
+    "publish": true,
+    "description": "Интенсивная увлажняющая и успокаивающая процедура для лица.",
+    "publicNote": "Рекомендованный курс — 4 процедуры."
   }
 ]

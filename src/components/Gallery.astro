@@ -1,0 +1,76 @@
+---
+import { Image } from 'astro:assets';
+import haircut from '../assets/gallery/haircut.jpg';
+import wash from '../assets/gallery/hair-wash.jpg';
+import styling from '../assets/gallery/styling.jpg';
+import care from '../assets/gallery/hair-care.jpg';
+const photos = [
+  { src: haircut, title: 'Мужская стрижка' },
+  { src: wash, title: 'Мытьё волос' },
+  { src: styling, title: 'Укладка волос' },
+  { src: care, title: 'Уход за волосами' },
+];
+---
+<salon-gallery id="gallery" class="container gallery" role="region" aria-labelledby="gallery-title" aria-describedby="gallery-note">
+  <div class="gallery-heading">
+    <h3 id="gallery-title">Иллюстрации процедур</h3>
+    <div class="gallery-controls" hidden>
+      <button type="button" data-step="-1" aria-label="Предыдущее фото" aria-controls="gallery-track">←</button>
+      <span class="gallery-count" aria-hidden="true">1 / {photos.length}</span>
+      <button type="button" data-step="1" aria-label="Следующее фото" aria-controls="gallery-track">→</button>
+    </div>
+  </div>
+  <p id="gallery-note" class="gallery-note">Стоковые иллюстрации. Это не фотографии салона и не примеры работ наших мастеров.</p>
+  <div id="gallery-track" class="gallery-track" role="group" tabindex="0" aria-label="Фотографии процедур: листайте стрелками или прокручивайте">
+    {photos.map((photo, index) => <figure class="gallery-slide" role="group" aria-label={`${index + 1} из ${photos.length}: ${photo.title}`}>
+      <Image src={photo.src} alt={photo.title} width={680} widths={[340, 680, 1024]} sizes="(max-width: 600px) 82vw, (max-width: 1100px) 65vw, 680px" format="webp" loading="lazy" />
+      <figcaption>{photo.title}</figcaption>
+    </figure>)}
+  </div>
+  <p class="visually-hidden" role="status" aria-live="polite" aria-atomic="true" data-gallery-status></p>
+</salon-gallery>
+<script>
+  class SalonGallery extends HTMLElement {
+    connectedCallback() {
+      const track = this.querySelector<HTMLElement>('.gallery-track')!;
+      const slides = [...this.querySelectorAll<HTMLElement>('.gallery-slide')];
+      const count = this.querySelector<HTMLElement>('.gallery-count')!;
+      const status = this.querySelector<HTMLElement>('[data-gallery-status]')!;
+      const controls = this.querySelector<HTMLElement>('.gallery-controls')!;
+      const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+      let current = 0;
+      let target: number | null = null;
+      const left = (index: number) => slides[index].offsetLeft - slides[0].offsetLeft;
+      const update = () => {
+        current = slides.reduce((nearest, _, index) =>
+          Math.abs(left(index) - track.scrollLeft) < Math.abs(left(nearest) - track.scrollLeft) ? index : nearest, 0);
+        count.textContent = `${current + 1} / ${slides.length}`;
+        status.textContent = slides[current].getAttribute('aria-label');
+        target = null;
+      };
+      const go = (index: number) => {
+        target = (index + slides.length) % slides.length;
+        track.scrollTo({ left: left(target), behavior: reducedMotion.matches ? 'instant' : 'smooth' });
+      };
+      controls.hidden = false;
+      controls.querySelectorAll<HTMLButtonElement>('button').forEach((button) => {
+        button.addEventListener('click', () => go((target ?? current) + Number(button.dataset.step)));
+      });
+      track.addEventListener('keydown', (event) => {
+        if (!['ArrowLeft', 'ArrowRight', 'Home', 'End'].includes(event.key)) return;
+        event.preventDefault();
+        if (event.key === 'Home') go(0);
+        else if (event.key === 'End') go(slides.length - 1);
+        else go((target ?? current) + (event.key === 'ArrowRight' ? 1 : -1));
+      });
+      // scrollend синхронизирует счётчик и после нативного свайпа; debounce — fallback.
+      let scrollTimer: ReturnType<typeof setTimeout>;
+      track.addEventListener('scroll', () => {
+        clearTimeout(scrollTimer);
+        scrollTimer = setTimeout(update, 150);
+      }, { passive: true });
+      track.addEventListener('scrollend', update);
+    }
+  }
+  customElements.define('salon-gallery', SalonGallery);
+</script>

@@ -1,0 +1,30 @@
+---
+import Layout from '../layouts/Layout.astro';
+import CallLink from '../components/CallLink.astro';
+import BookingNote from '../components/BookingNote.astro';
+import PromotionIcon from '../components/PromotionIcon.astro';
+import { publicPromotions } from '../data/catalog';
+import PriceVariants from '../components/PriceVariants.astro';
+import { siteHref } from '../utils/urls';
+---
+<Layout breadcrumbs={[{ name: 'Акции', path: '/aktsii/' }]} title="Акции и предложения — салон Юлия Дубицкая, Москва" description="Полировка волос, массаж лица и воротниковой зоны, FACE FIT и HYDRO PLUS в салоне «Юлия Дубицкая». Длительность, стоимость и запись по телефону.">
+  <div class="container catalog-page promotions-page">
+    <nav class="breadcrumbs" aria-label="Хлебные крошки"><a href={siteHref('/')}>Главная</a><span aria-hidden="true">/</span><span aria-current="page">Акции</span></nav>
+    <header class="catalog-heading">
+      <div class="promotions-heading"><PromotionIcon /><h1>Акции и предложения</h1></div>
+      <p>Небольшие процедуры и уход за собой. Выберите предложение и позвоните в салон для записи.</p>
+    </header>
+    <div class="promotion-grid">
+      {publicPromotions.map((promotion) => <article id={promotion.id} class="promotion-card" data-promotion={promotion.id}>
+        <p class="promotion-duration">{promotion.duration}</p>
+        <h2>{promotion.title}</h2>
+        <p class="promotion-description">{promotion.description}</p>
+        {promotion.publicNote && <p class="promotion-note">{promotion.publicNote}</p>}
+        <div class="promotion-price"><PriceVariants service={{ id: promotion.id, title: promotion.title, status: promotion.status, variants: [{ ...promotion.variant, label: '' }] }} path={promotion.priceRef.split('/').slice(0, -1).join('/')} /></div>
+        <CallLink label="Позвонить для записи" class="text-link" />
+      </article>)}
+    </div>
+    <p class="promotions-terms">Предложения опубликованы без указания сроков действия. Актуальность и дополнительные условия уточняйте по телефону при записи.</p>
+    <BookingNote />
+  </div>
+</Layout>

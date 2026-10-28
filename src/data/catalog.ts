@@ -51,6 +51,7 @@ for (const direction of catalog) {
 export const promotions = z.array(z.object({
   id, title: z.string().min(1), duration: z.string().min(1), source: id,
   status: z.literal('needs-confirmation'), terms: z.string().min(1), priceRef: z.string().min(1),
+  publish: z.boolean().default(false), description: z.string().min(1), publicNote: z.string(),
 })).parse(promotionData);
 const priceIds = new Set(catalog.flatMap((d) => d.groups.flatMap((g) =>
   g.services.flatMap((s) => s.variants.map((v) => `${d.id}/${g.id}/${s.id}/${v.id}`)))));
@@ -90,6 +91,20 @@ for (const direction of publicCatalog) {
 }
 export type PublicDirection = (typeof publicCatalog)[number];
 export const directionHref = (direction: Pick<PublicDirection, 'slug'>) => siteHref(`/uslugi/${direction.slug}/`);
+
+// Разрешение на отдельную страницу акций от 28.10.2026 не меняет publicCatalog.
+// Бизнес-актуальность недатированных предложений ещё требует сверки с заказчиком.
+export const publicPromotions = promotions.filter((promotion) => promotion.publish).map((promotion) => {
+  const [directionId, groupId, serviceId, variantId] = promotion.priceRef.split('/');
+  const direction = catalog.find((item) => item.id === directionId);
+  const service = direction?.groups.find((item) => item.id === groupId)?.services.find((item) => item.id === serviceId);
+  const variant = service?.variants.find((item) => item.id === variantId);
+  if (direction?.status !== 'source' || !service || ['paused', 'conflict'].includes(service.status)
+    || !variant || variant.price.kind === 'unspecified') {
+    throw new Error(`Нельзя опубликовать предложение: ${promotion.id}`);
+  }
+  return { ...promotion, variant };
+});
 
 // Главная хранит ссылки на услуги, а не независимые копии их цен.
 export const priceSamples = [

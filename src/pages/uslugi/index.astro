@@ -4,7 +4,7 @@ import Layout from '../../layouts/Layout.astro';
 import DirectionList from '../../components/DirectionList.astro';
 import BookingNote from '../../components/BookingNote.astro';
 ---
-<Layout title="Услуги и цены — салон красоты Юлия Дубицкая, Москва" description="Каталог услуг салона «Юлия Дубицкая»: волосы, маникюр, педикюр, уход за лицом, брови и ресницы, макияж, депиляция, татуаж, пирсинг и массаж. Цены и запись.">
+<Layout breadcrumbs={[{ name: 'Услуги и цены', path: '/uslugi/' }]} title="Услуги и цены — салон красоты Юлия Дубицкая, Москва" description="Каталог услуг салона «Юлия Дубицкая»: волосы, маникюр, педикюр, уход за лицом, брови и ресницы, макияж, депиляция, татуаж, пирсинг и массаж. Цены и запись.">
   <div class="container catalog-page">
     <nav class="breadcrumbs" aria-label="Хлебные крошки"><a href={siteHref('/')}>Главная</a><span aria-hidden="true">/</span><span aria-current="page">Услуги и цены</span></nav>
     <header class="catalog-heading">

@@ -16,6 +16,7 @@ const isCatalog = Astro.url.pathname === siteHref('/uslugi/');
     <nav aria-label="Основная навигация">
       <a href={siteHref('/#about')}>О салоне</a>
       <a href={siteHref('/uslugi/')} aria-current={isCatalog ? 'page' : undefined}>Услуги и цены</a>
+      <a href={siteHref('/aktsii/')} aria-current={Astro.url.pathname === siteHref('/aktsii/') ? 'page' : undefined}>Акции</a>
       <a href={siteHref('/#contacts')}>Контакты</a>
     </nav>
     <CallLink label={salon.phone} class="header-phone" />

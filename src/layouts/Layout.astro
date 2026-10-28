@@ -3,8 +3,32 @@ import { siteHref } from '../utils/urls';
 import '../styles/global.css';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
-interface Props { title: string; description: string; }
-const { title, description } = Astro.props;
+import { salon } from '../data/salon';
+import { absoluteHref, isLive } from '../utils/seo';
+import interior from '../assets/salon.webp';
+interface Props {
+  title: string; description: string; is404?: boolean;
+  breadcrumbs?: { name: string; path: `/${string}` }[];
+}
+const { title, description, is404 = false, breadcrumbs = [] } = Astro.props;
+// Astro.url содержит base; canonical всегда строится от настроенного origin, без query/hash.
+const canonical = new URL(is404 ? siteHref('/404.html') : Astro.url.pathname, Astro.site).href;
+const socialImage = absoluteHref('/social.jpg');
+const graph: Record<string, unknown>[] = [{
+  '@type': 'BeautySalon', '@id': `${absoluteHref('/')}#salon`,
+  name: `Салон красоты «${salon.name}»`, url: absoluteHref('/'),
+  image: new URL(interior.src, Astro.site).href, telephone: salon.phoneHref.slice(4),
+  address: { '@type': 'PostalAddress', streetAddress: 'ул. Октябрьская, д. 35', addressLocality: 'Москва', addressCountry: 'RU' },
+  geo: { '@type': 'GeoCoordinates', latitude: 55.789688, longitude: 37.613293 },
+  openingHours: 'Mo-Su 09:00-21:00', hasMap: salon.map.placeUrl,
+}];
+if (breadcrumbs.length) graph.push({
+  '@type': 'BreadcrumbList',
+  itemListElement: [{ name: 'Главная', path: '/' as const }, ...breadcrumbs].map((item, index) => ({
+    '@type': 'ListItem', position: index + 1, name: item.name, item: absoluteHref(item.path),
+  })),
+});
+const structuredData = JSON.stringify({ '@context': 'https://schema.org', '@graph': graph }).replaceAll('<', '\\u003c');
 ---
 <!doctype html>
 <html lang="ru">
@@ -13,7 +37,23 @@ const { title, description } = Astro.props;
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{title}</title>
     <meta name="description" content={description} />
-    <meta name="robots" content="noindex, nofollow" />
+    <meta name="robots" content={isLive && !is404 ? 'index, follow' : 'noindex, nofollow'} />
+    <link rel="canonical" href={canonical} />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="ru_RU" />
+    <meta property="og:site_name" content={`Салон красоты «${salon.name}»`} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={socialImage} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Салон красоты «Юлия Дубицкая» — Москва, Октябрьская, 35" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={socialImage} />
+    {!is404 && <script type="application/ld+json" set:html={structuredData} />}
     <meta name="theme-color" content="#704353" />
     <meta name="referrer" content="strict-origin-when-cross-origin" />
     <link rel="icon" type="image/svg+xml" href={siteHref('/favicon.svg')} />
